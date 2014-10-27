@@ -7,6 +7,7 @@
 * [button](button/README.md)
 * [linux kernel compile](linux_kernel_compile/README.md)
    * [compile setting](linux_kernel_compile/compile_setting.md)
+   * [How to compile](linux_kernel_compile/how_to_compile.md)
 * [Tools](tools/README.md)
    * [backup](tools/backup.md)
 * [Cloud](cloud/README.md)
@@ -18,4 +19,6 @@
    * [references](u-boot/references.md)
 * [Git](git/README.md)
    * [git merge tool](git/git_merge_tool.md)
+* [Network](network/README.md)
+   * [multiple gateways](network/multiple_gateway.md)
 
