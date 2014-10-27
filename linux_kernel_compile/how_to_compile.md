@@ -40,9 +40,13 @@ maybe you can add `-j4` to make it faster.
 
 `sudo` make sure you have the writing permission for the default path `/lib/modules/KERNEL-NAME`
 
-or you can have no sudo and use
+or you can have no sudo and use:
 
 `make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- INSTALL_MOD_PATH=/path/to/target modules_install`
+
+or you can copy to target board directly:
+
+`scp -r /lib/modules/3.8.13+ root@10.42.0.12:/lib/modules/`
 
 if you make something wrong and want to recompile again, please `make clean` first.
 
