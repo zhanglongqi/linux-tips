@@ -91,16 +91,5 @@ real root file system can be mounted.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 [GRUB]:http://www.gnu.org/software/grub/
 [initrd]:https://en.wikipedia.org/wiki/Initrd

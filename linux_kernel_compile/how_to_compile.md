@@ -50,3 +50,12 @@ or you can copy to target board directly:
 
 if you make something wrong and want to recompile again, please `make clean` first.
 
+[reference1] compile wiki
+
+[reference2] compile wiki
+
+[reference3], Beaglebone Black NFS root
+
+[reference1]:http://wiki.beyondlogic.org/index.php/BeagleBoneBlack_Building_Kernel
+[reference2]:http://elinux.org/Building_BBB_Kernel
+[reference3]:http://www.embeddedhobbyist.com/beaglebone-black-nfs-root/
