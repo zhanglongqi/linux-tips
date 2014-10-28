@@ -41,10 +41,13 @@ rootpath=/home/longqi/BBB/rootfs
 kloadaddr=0x82000000
 fdtaddr=0x83000000
 
+##Disable HDMI/eMMC
+cape_disable=capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN,BB-BONE-EMMC-2G
+#cape_enable=capemgr.enable_partno=BB-BONE-LCD7-01
 
 #parameters for kernel
-mmc_args=setenv bootargs console=ttyO0,115200n8 quiet root=/dev/mmcblk0p2 ro rootfstype=ext4 rootwait ip=${staticip}
-nfs_args=setenv bootargs console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=${serverip}:${rootpath} ip=${staticip}
+mmc_args=setenv bootargs console=ttyO0,115200n8 quiet root=/dev/mmcblk0p2 ro rootfstype=ext4 rootwait ${cape_disable} ${cape_enable}
+nfs_args=setenv bootargs console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=${serverip}:${rootpath} ip=${staticip} ${cape_disable} ${cape_enable}
 
 
 #load kernel and device tree
@@ -64,7 +67,9 @@ uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
 
 ```
 ###format
-`NAME=VALUE` in `uEnv.txt` is same with `setenv NAME VALUE` in u-boot prompt
+`NAME=VALUE` in `uEnv.txt` is same with `setenv NAME VALUE` in u-boot prompt, they do the same thing:
+
+**define virables**
 
 `${NAME}` means call this variable
 
@@ -72,8 +77,15 @@ uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
 
 ###parameters for booting
 
-
-
+`kloadaddr` this is the loading address for the kernel
+`fdtaddr` this the loading addressfor the binary device tree
+`initrd_addr` this is the loading address for the [initrd] ramdisk
+```
+In computing, initrd (initial ramdisk) is a scheme for loading a temporary root file system
+into memory in the boot process of the Linux kernel. initrd and initramfs refer to two
+different methods of achieving this. Both are commonly used to make preparations before the
+real root file system can be mounted.
+```
 
 
 
@@ -91,3 +103,4 @@ uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
 
 
 [GRUB]:http://www.gnu.org/software/grub/
+[initrd]:https://en.wikipedia.org/wiki/Initrd

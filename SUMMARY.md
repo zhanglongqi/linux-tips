@@ -8,6 +8,7 @@
 * [linux kernel compile](linux_kernel_compile/README.md)
    * [compile setting](linux_kernel_compile/compile_setting.md)
    * [How to compile](linux_kernel_compile/how_to_compile.md)
+   * [Difference of kernel format](linux_kernel_compile/difference_of_kernel_format.md)
 * [Tools](tools/README.md)
    * [backup](tools/backup.md)
 * [Cloud](cloud/README.md)
