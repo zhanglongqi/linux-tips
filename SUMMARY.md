@@ -11,6 +11,7 @@
    * [Difference of kernel format](linux_kernel_compile/difference_of_kernel_format.md)
 * [Tools](tools/README.md)
    * [backup](tools/backup.md)
+   * [Scripts](tools/scripts.md)
 * [Cloud](cloud/README.md)
    * [Amzon EC2](cloud/amzon_ec2.md)
        * [basic](cloud/basic.md)
