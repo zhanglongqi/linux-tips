@@ -13,6 +13,7 @@
    * [backup](tools/backup.md)
    * [Scripts](tools/scripts.md)
    * [benchmark](tools/benchmark.md)
+   * [TFTP](tools/tftp.md)
 * [Cloud](cloud/README.md)
    * [Amzon EC2](cloud/amzon_ec2.md)
        * [basic](cloud/basic.md)
