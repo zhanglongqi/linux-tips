@@ -1,4 +1,4 @@
-linux-tips
+Linux-tips
 ==========
 
 Linux Tips
