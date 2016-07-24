@@ -1,12 +1,13 @@
 # uEnv
+
 booting sequence:
-MLO->u-boot.img->kernel->root file system
-Loading uEnv.txt after loading u-boot.img,
+`MLO->u-boot.img->kernel->root file system`
+Loading `uEnv.txt` after loading u-boot.img,
 U-boot allows the user a 2-3 seconds window to stop the boot process.
 Hit any key in the UART terminal application and the u-boot prompt will
 be displayed as shown below:
 
-`U-Boot#   `
+`U-Boot#`
 
 There are several useful commands to remember here.
 
@@ -18,12 +19,12 @@ to set virable, type `setenv NAME VALUE`
 
 to get more help, type `help` or `help COMMAND`
 
-To continue the boot from u-boot, simply type `boot` and the process will continue as if you did not stop the boot by hitting a key.  This is also equivalent to typing `run bootcmd`.  The bootcmd environment variable is actually a sequence of conditional statements (separated by semicolons) which perform checks on the hardware and software to complete the boot process.
+To continue the boot from u-boot, simply type `boot` and the process will continue as if you did not stop the boot by hitting a key.  This is also equivalent to typing `run bootcmd`.  The bootcmd environment variable is actually a sequence of conditional statements \(separated by semicolons\) which perform checks on the hardware and software to complete the boot process.
 
 These commands can do all the work, but we will need `uEnv.txt` if we want to make things work
 automaticaly.
 
-Actually it works like [GRUB], you will easily understand the whole process if you know [GRUB] well.
+Actually it works like [GRUB](http://www.gnu.org/software/grub/), you will easily understand the whole process if you know [GRUB](http://www.gnu.org/software/grub/) well.
 
 Let me show my uEnv.txt first:
 
@@ -66,7 +67,9 @@ uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
 #uenvcmd=run load_z_kernel; run loadfdt; run mmc_args; run boot_zimage
 
 ```
-###format
+
+### format
+
 `NAME=VALUE` in `uEnv.txt` is same with `setenv NAME VALUE` in u-boot prompt, they do the same thing:
 
 **define virables**
@@ -75,11 +78,12 @@ uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
 
 `run NAME` means run the `NAME` as command
 
-###parameters for booting
+### parameters for booting
 
 `kloadaddr` this is the loading address for the kernel
 `fdtaddr` this the loading addressfor the binary device tree
-`initrd_addr` this is the loading address for the [initrd] ramdisk
+`initrd_addr` this is the loading address for the [initrd](https://en.wikipedia.org/wiki/Initrd) ramdisk
+
 ```
 In computing, initrd (initial ramdisk) is a scheme for loading a temporary root file system
 into memory in the boot process of the Linux kernel. initrd and initramfs refer to two
@@ -87,9 +91,3 @@ different methods of achieving this. Both are commonly used to make preparations
 real root file system can be mounted.
 ```
 
-
-
-
-
-[GRUB]:http://www.gnu.org/software/grub/
-[initrd]:https://en.wikipedia.org/wiki/Initrd
