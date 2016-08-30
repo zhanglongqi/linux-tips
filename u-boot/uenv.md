@@ -52,17 +52,17 @@ nfs_args=setenv bootargs console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=${serve
 
 
 #load kernel and device tree
-load_u_kernel=tftpboot ${kloadaddr} ${rootpath}/boot/uImage
-load_z_kernel=tftpboot ${kloadaddr} ${rootpath}/boot/zImage
-loadfdt=tftpboot ${fdtaddr} ${rootpath}/boot/dtbs/am335x-boneblack.dtb
+load_u_kernel=tftp ${kloadaddr} ${rootpath}/boot/uImage
+load_z_kernel=tftp ${kloadaddr} ${rootpath}/boot/zImage
+loadfdt=tftp ${fdtaddr} ${rootpath}/boot/dtbs/am335x-boneblack.dtb
 
 
 #booting options
-boot_uImage=bootm ${kloadaddr} - ${fdtaddr}
+boot_uimage=bootm ${kloadaddr} - ${fdtaddr}
 boot_zimage=bootz ${kloadaddr} - ${fdtaddr}
 
 #to boot
-uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
+uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uimage
 
 #uenvcmd=run load_z_kernel; run loadfdt; run mmc_args; run boot_zimage
 
