@@ -36,3 +36,25 @@ origin    git@github.com:mojombo/grit.git (push)
 
 This means we can pull contributions from any of these users pretty easily. We may additionally have permission to push to one or more of these.
 
+### Adding Remote Repositories
+We’ve mentioned and given some demonstrations of how the clone command implicitly adds the origin remote for you. Here’s how to add a new remote explicitly. To add a new remote Git repository as a shortname you can reference easily, run `git remote add <shortname> <url>`:
+
+```
+$ git remote
+origin
+$ git remote add pb https://github.com/paulboone/ticgit
+$ git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+pb	https://github.com/paulboone/ticgit (fetch)
+pb	https://github.com/paulboone/ticgit (push)
+```
+
+
+
+
+
+
+
+
+
