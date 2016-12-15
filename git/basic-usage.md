@@ -101,3 +101,44 @@ doc/**/*.pdf
 ```
 
 GitHub maintains a fairly comprehensive list of good .gitignore file examples for dozens of projects and languages at [here](https://github.com/github/gitignore) if you want a starting point for your project.
+
+### Git Diff in an External Tool
+
+
+We will continue to use the git diff command in various ways throughout the rest of the book. There is another way to look at these diffs if you prefer a graphical or external diff viewing program instead. If you run git difftool instead of git diff, you can view any of these diffs in software like emerge, vimdiff and many more (including commercial products). Run git difftool --tool-help to see what is available on your system.
+
+[Meld](http://meldmerge.org/) as shown in the figure is my favourite diff and merge tool. I highly recommend meld as your diff and merge tool.
+![](/assets/Snip20161215_18.png)
+
+
+## Committing Your Changes
+Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged – any files you have created or modified that you haven’t run git add on since you edited them – won’t go into this commit. They will stay as modified files on your disk. In this case, let’s say that the last time you ran git status, you saw that everything was staged, so you’re ready to commit your changes. The simplest way to commit is to type git commit:
+```
+$ git commit
+```
+Doing so launches your editor of choice. (This is set by your shell’s $EDITOR environment variable – usually vim or emacs, although you can configure it with whatever you want using the `git config --global core.editor` command as you saw in Getting Started).
+
+The editor displays the following text (this example is a Vim screen):
+```
+$ git commit readme.md
+
+update default voltage setting value from 200 to 380
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Explicit paths specified without -i or -o; assuming --only paths...
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#       modified:   readme.md
+#
+```
+You can see that the default commit message contains the latest output of the git status command commented out and one empty line on top. You can remove these comments and type your commit message, or you can leave them there to help you remember what you’re committing. (For an even more explicit reminder of what you’ve modified, you can pass the -v option to git commit. Doing so also puts the diff of your change in the editor so you can see exactly what changes you’re committing.) When you exit the editor, Git creates your commit with that commit message (with the comments and diff stripped out).
+
+Alternatively, you can type your commit message inline with the commit command by specifying it after a -m flag, like this:
+```
+$ git commit -m 'update default voltage setting value from 200 to 380' readme.md
+
+[master d08b52b] update default voltage setting value from 200 to 380
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+```
