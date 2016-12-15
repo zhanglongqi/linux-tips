@@ -18,3 +18,20 @@ origin	git@ict.eri.ntu.edu.sg:test_group/test_project.git (fetch)
 origin	git@ict.eri.ntu.edu.sg:test_group/test_project.git (push)
 ```
 
+If you have more than one remote, the command lists them all. For example, a repository with multiple remotes for working with several collaborators might look something like this.
+```
+$ cd grit
+$ git remote -v
+bakkdoor  https://github.com/bakkdoor/grit (fetch)
+bakkdoor  https://github.com/bakkdoor/grit (push)
+cho45     https://github.com/cho45/grit (fetch)
+cho45     https://github.com/cho45/grit (push)
+defunkt   https://github.com/defunkt/grit (fetch)
+defunkt   https://github.com/defunkt/grit (push)
+koke      git://github.com/koke/grit.git (fetch)
+koke      git://github.com/koke/grit.git (push)
+origin    git@github.com:mojombo/grit.git (fetch)
+origin    git@github.com:mojombo/grit.git (push)
+```
+
+This means we can pull contributions from any of these users pretty easily. We may additionally have permission to push to one or more of these.
