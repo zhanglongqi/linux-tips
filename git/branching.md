@@ -20,3 +20,18 @@ Switched to a new branch 'develop'
 ```
 This creates a new pointer to the same commit you’re currently on and checkout to the new branch.
 
+To see all branchs:
+```
+# longqi @ LQMacPro in ~/test_project on git:develop o [16:12:18]
+$ git branch
+* develop
+  fix_bug_112
+  master
+```
+
+## Switching Branches
+To switch to an existing branch, you run the git checkout command. Let’s switch to the new testing branch:
+```
+$ git checkout develop
+```
+This moves HEAD to point to the develop branch.
