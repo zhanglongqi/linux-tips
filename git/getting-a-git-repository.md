@@ -30,6 +30,6 @@ That creates a directory named “test_project”, initializes a `.git` director
 ```
 $ git clone git@ict.eri.ntu.edu.sg:test_group/test_project.git my_project
 ```
-That command does the same thing as the previous one, but the target directory is called my_project.
+That command does the same thing as the previous one, but the target directory is called `my_project`.
 
 Git has a number of different transfer protocols you can use. The previous example uses the `git://` protocol, but you may also see `https://` or `user@server:path/to/repo.git`, which uses the SSH transfer protocol. Getting Git on a Server will introduce all of the available options the server can set up to access your Git repository and the pros and cons of each.
