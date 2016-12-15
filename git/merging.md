@@ -146,3 +146,9 @@ Anything that has merge conflicts and hasn’t been resolved is listed as unmerg
 >>>>>>> iss53:index.html
 ```
 This means the version in `HEAD` (your `master` branch, because that was what you had checked out when you ran your merge command) is the top part of that block (everything above the `=======`), while the version in your `iss53` branch looks like everything in the bottom part. In order to resolve the conflict, you have to either choose one side or the other or merge the contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:
+```
+<div id="footer">
+please contact us at email.support@github.com
+</div>
+```
+This resolution has a little of each section, and the `<<<<<<<`, `=======`, and `>>>>>>>` lines have been completely removed. After you’ve resolved each of these sections in each conflicted file, run `git add` on each file to mark it as resolved. Staging the file marks it as resolved in Git.
