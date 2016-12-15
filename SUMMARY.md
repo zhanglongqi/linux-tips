@@ -22,7 +22,7 @@
     * [uEnv](u-boot/uenv.md)
     * [references](u-boot/references.md)
 * [Git](git/README.md)
-    * [Get started](git/get-started.md)
+    * [Getting started](git/get-started.md)
     * [git merge tool](git/git_merge_tool.md)
     * [workflow of git](git/workflow-of-git.md)
 * [Network](network/README.md)
