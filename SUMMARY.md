@@ -24,6 +24,7 @@
 * [Git](git/README.md)
     * [Getting started](git/getting-started.md)
     * [Getting a Git Repository](git/getting-a-git-repository.md)
+    * [Basic usage](git/basic-usage.md)
     * [git merge tool](git/git_merge_tool.md)
     * [workflow of git](git/workflow-of-git.md)
 * [Network](network/README.md)
