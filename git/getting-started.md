@@ -66,6 +66,8 @@ ssh-keygen -C 'YOUR_EMAIL@EMAIL.COM'
 ```
 Don't set 'passphrase' if you don't want to type password everytime you use it. If you want to know more. [Do you need a passphrase](http://superuser.com/questions/261361/do-i-need-to-have-a-passphrase-for-my-ssh-rsa-key).
 
+Copy and paste your **complete** public key to our [git server](http://ict.eri.ntu.edu.sg:8002/profile/keys).
+
 ## Getting Help
 If you ever need help while using Git, there are three ways to get the manual page (manpage) help for any of the Git commands:
 ```
