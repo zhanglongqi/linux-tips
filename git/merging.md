@@ -1,3 +1,4 @@
+## Basic Merging
 Let’s go through a simple example of branching and merging with a workflow that you might use in the real world. You’ll follow these steps:
 
 1. Do work on a web site.
@@ -68,14 +69,47 @@ $ git branch -d hotfix
 Deleted branch hotfix (3a0874c).
 ```
 
+Now you can switch back to your work-in-progress branch on issue #53 and continue working on it.
+
+```
+$ git checkout iss53
+Switched to branch "iss53"
+$ vim index.html
+$ git commit -a -m 'finished the new footer [issue 53]'
+[iss53 ad82d7a] finished the new footer [issue 53]
+1 file changed, 1 insertion(+)
+```
+![](/assets/basic-branching-6.png)
+
+It’s worth noting here that the work you did in your hotfix branch is not contained in the files in your `iss53` branch. If you need to pull it in, you can merge your `master` branch into your `iss53` branch by running `git merge master`, or you can wait to integrate those changes until you decide to pull the `iss53` branch back into master later.
+
+Suppose you’ve decided that your issue #53 work is complete and ready to be merged into your `master` branch. In order to do that, you’ll merge your `iss53` branch into `master`, much like you merged your `hotfix` branch earlier. All you have to do is check out the branch you wish to merge into and then run the `git merge` command:
+```
+$ git checkout master
+Switched to branch 'master'
+$ git merge iss53
+Merge made by the 'recursive' strategy.
+index.html |    1 +
+1 file changed, 1 insertion(+)
+```
+This looks a bit different than the `hotfix` merge you did earlier. In this case, your development history has diverged from some older point. Because the commit on the branch you’re on isn’t a direct ancestor of the branch you’re merging in, Git has to do some work. In this case, Git does a simple three-way merge, using the two snapshots pointed to by the branch tips and the common ancestor of the two.
+
+![Three snapshots used in a typical merge](/assets/basic-merging-1.png)
+
+Instead of just moving the branch pointer forward, Git creates a new snapshot that results from this three-way merge and automatically creates a new commit that points to it. This is referred to as a merge commit, and is special in that it has more than one parent.
+
+![A merge commit](/assets/basic-merging-2.png)
+
+It’s worth pointing out that Git determines the best common ancestor to use for its merge base; this is different than older tools like CVS or Subversion (before version 1.5), where the developer doing the merge had to figure out the best merge base for themselves. This makes merging a heck of a lot easier in Git than in these other systems.
+
+Now that your work is merged in, you have no further need for the `iss53` branch. You can close the ticket in your ticket-tracking system, and delete the branch:
+```
+$ git branch -d iss53
+```
 
 __Above is the example of basic merging.__
 __Merge below will involve conflict.__
 
 
-Now you can switch back to your work-in-progress branch on issue #53 and continue working on it.
-
-
-
-
-
+## Basic Merge Conflicts
+Occasionally, this process doesn’t go smoothly. If you changed the same part of the same file differently in the two branches you’re merging together, Git won’t be able to merge them cleanly. If your fix for issue #53 modified the same part of a file as the hotfix, you’ll get a merge conflict that looks something like this:
