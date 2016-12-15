@@ -68,7 +68,7 @@ Don't set 'passphrase' if you don't want to type password everytime you use it. 
 
 Copy and paste your **complete** public key to our [git server](http://ict.eri.ntu.edu.sg:8002/profile/keys).
 
-If you don't have a account on our git server, please contact me <mailto:lqzhang[AT]ntu.edu.sg>.
+If you don't have a account on our git server, please contact [me](http://zhanglongqi.github.io).
 
 A complete public key example:
 ![ssh public example](/assets/Snip20161215_16.png)
