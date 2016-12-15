@@ -19,7 +19,7 @@ Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-    new file:   README
+    new file:   README.md
     
 ```
 ## Staging Modified Files
@@ -165,7 +165,7 @@ $ git commit -a -m 'added new benchmarks'
  1 file changed, 5 insertions(+), 0 deletions(-)
 ```
 
-Notice how you don’t have to run git add on the CONTRIBUTING.md file in this case before you commit. That’s because the -a flag includes all changed files. This is convenient, but be careful; sometimes this flag will cause you to include unwanted changes.
+Notice how you don’t have to run git add on the readme.md file in this case before you commit. That’s because the `-a` flag includes all changed files. This is convenient, but be careful; sometimes this flag will cause you to include unwanted changes.
 
 
 ## Viewing the Commit History
