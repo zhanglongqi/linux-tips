@@ -177,4 +177,5 @@ or on Linux:
 
 ```
 git config --global merge.tool meld
+git config --global mergetool.meld.path /usr/bin/meld
 ```
