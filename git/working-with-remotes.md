@@ -80,7 +80,7 @@ When you have your project at a point that you want to share, you have to push i
 ```
 $ git push origin master
 ```
-This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to fetch their work first and incorporate it into yours before you’ll be allowed to push. See [Git Branching](./branching) for more detailed information on how to push to remote servers.
+This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to fetch their work first and incorporate it into yours before you’ll be allowed to push. See [Git Branching](./branching.md) for more detailed information on how to push to remote servers.
 
 
 
