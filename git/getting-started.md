@@ -56,7 +56,7 @@ $ git config user.name
 John Doe
 ```
 
-## Using `ssh`
+## Using SSH
 
 ```
 cd 

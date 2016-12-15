@@ -23,10 +23,13 @@ If you want to get a copy of an existing Git repository – for example, a proje
 
 You clone a repository with git clone [url]. For example, if you want to clone the Git linkable library called libgit2, you can do so like this:
 
-$ git clone https://github.com/libgit2/libgit2
-That creates a directory named “libgit2”, initializes a .git directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version. If you go into the new libgit2 directory, you’ll see the project files in there, ready to be worked on or used. If you want to clone the repository into a directory named something other than “libgit2”, you can specify that as the next command-line option:
+```
+$ git clone git@ict.eri.ntu.edu.sg:test_group/test_project.git
+```
+That creates a directory named “test_project”, initializes a `.git` directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version. If you go into the new test_project directory, you’ll see the project files in there, ready to be worked on or used. If you want to clone the repository into a directory named something other than “test_project”, you can specify that as the next command-line option:
+```
+$ git clone git@ict.eri.ntu.edu.sg:test_group/test_project.git my_project
+```
+That command does the same thing as the previous one, but the target directory is called my_project.
 
-$ git clone https://github.com/libgit2/libgit2 mylibgit
-That command does the same thing as the previous one, but the target directory is called mylibgit.
-
-Git has a number of different transfer protocols you can use. The previous example uses the https:// protocol, but you may also see git:// or user@server:path/to/repo.git, which uses the SSH transfer protocol. Getting Git on a Server will introduce all of the available options the server can set up to access your Git repository and the pros and cons of each.
+Git has a number of different transfer protocols you can use. The previous example uses the `git://` protocol, but you may also see `https://` or `user@server:path/to/repo.git`, which uses the SSH transfer protocol. Getting Git on a Server will introduce all of the available options the server can set up to access your Git repository and the pros and cons of each.
