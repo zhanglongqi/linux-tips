@@ -167,7 +167,83 @@ $ git commit -a -m 'added new benchmarks'
 
 Notice how you don’t have to run git add on the readme.md file in this case before you commit. That’s because the `-a` flag includes all changed files. This is convenient, but be careful; sometimes this flag will cause you to include unwanted changes.
 
+## Tagging
+Like most VCSs, Git has the ability to tag specific points in history as being important. Typically people use this functionality to mark release points (v1.0, and so on). In this section, you’ll learn how to list the available tags, how to create new tags, and what the different types of tags are.
+Listing the available tags in Git is straightforward. Just type `git tag`:
+```
+# longqi @ LQMacPro in ~/PycharmProjects/Hybrid-Microgrid on git:RES_integration x [22:16:59]
+$ git tag
+auto_turn_on
+delete_ModbusTCP
+modbusTCP_end
+v1.0
+v1.1
+v2.0
+v2.0.1
+v2.0.2
+v2.1
+v2.2
+v2.3
+v3.0
+v4.0
+```
+Git uses two main types of tags: **lightweight** and **annotated**.
 
+A lightweight tag is very much like a branch that doesn’t change – it’s just a pointer to a specific commit.
+
+Annotated tags, however, are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). It’s generally recommended that you create annotated tags so you can have all this information; but if you want a temporary tag or for some reason don’t want to keep the other information, lightweight tags are available too.
+
+### Annotated Tags
+Creating an annotated tag in Git is simple. The easiest way is to specify -a when you run the tag command:
+```
+$ git tag -a v1.4 -m "my version 1.4"
+$ git tag
+v0.1
+v1.3
+v1.4
+```
+
+The `-m` specifies a tagging message, which is stored with the tag. If you don’t specify a message for an annotated tag, Git launches your editor so you can type it in.
+
+You can see the tag data along with the commit that was tagged by using the `git show` command:
+```
+$ git show v1.4
+tag v1.4
+Tagger: Ben Straub <ben@straub.cc>
+Date:   Sat May 3 20:19:12 2014 -0700
+
+my version 1.4
+
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon <schacon@gee-mail.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+```
+That shows the tagger information, the date the commit was tagged, and the annotation message before showing the commit information.
+
+### Lightweight Tags
+Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file – no other information is kept. To create a lightweight tag, don’t supply the `-a`, `-s`, or `-m` option:
+
+```
+$ git tag v1.4-lw
+$ git tag
+v0.1
+v1.3
+v1.4
+v1.4-lw
+v1.5
+This time, if you run git show on the tag, you don’t see the extra tag information. The command just shows the commit:
+
+$ git show v1.4-lw
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon <schacon@gee-mail.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+    
+```    
+    
 ## Viewing the Commit History
 After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the `git log` command.
 
