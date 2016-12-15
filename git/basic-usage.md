@@ -58,4 +58,46 @@ index 9fd6ba9..dc23ecd 100644
 ```
 From the output of diff tool we can see I deleted one line and add three lines.
 
+To discard the modification you just did to last commmit:
+```
+# longqi @ LQMacPro in ~/test_project on git:master o [14:34:04]
+$ git status
+On branch master
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+# longqi @ LQMacPro in ~/test_project on git:master x [15:40:29]
+$ git checkout readme.md
+
+# longqi @ LQMacPro in ~/test_project on git:master o [15:41:25]
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+```
+## Ignore Files
+Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or files produced by your build system. In such cases, you can create a file listing patterns to match them named .gitignore. Here is an example .gitignore file:
+
+```
+# no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
+doc/**/*.pdf
+```
+
+GitHub maintains a fairly comprehensive list of good .gitignore file examples for dozens of projects and languages at [here](https://github.com/github/gitignore) if you want a starting point for your project.
