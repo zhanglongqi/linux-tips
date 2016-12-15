@@ -57,7 +57,21 @@ Fast-forward
  index.html | 2 ++
  1 file changed, 2 insertions(+)
  ```
-You’ll notice the phrase “fast-forward” in that merge. Because the commit C4 pointed to by the branch hotfix you merged in was directly ahead of the commit C2 you’re on, Git simply moves the pointer forward. To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit’s history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together – this is called a “fast-forward.”
+You’ll notice the phrase “fast-forward” in that merge. Because the commit `C4` pointed to by the branch hotfix you merged in was directly ahead of the commit `C2` you’re on, Git simply moves the pointer forward. To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit’s history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together – this is called a “fast-forward.”
 
 Your change is now in the snapshot of the commit pointed to by the master branch, and you can deploy the fix.
 ![](/assets/basic-branching-5.png)
+
+After your super-important fix is deployed, you’re ready to switch back to the work you were doing before you were interrupted. However, first you’ll delete the hotfix branch, because you no longer need it – the `master` branch points at the same place. You can delete it with the `-d` option to git branch:
+```
+$ git branch -d hotfix
+Deleted branch hotfix (3a0874c).
+```
+
+
+Now you can switch back to your work-in-progress branch on issue #53 and continue working on it.
+
+
+
+
+
