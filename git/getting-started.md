@@ -12,6 +12,7 @@ The first thing you should do when you install Git is to set your user name and 
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
+
 Again, you need to do this only once if you pass the --global option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the --global option when you’re in that project.
 
 ## Initiate a git project:
@@ -40,3 +41,37 @@ On a x64 system
 ```
 $ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
 ```
+
+## Checking Your Settings
+If you want to check your settings, you can use the git config --list command to list all the settings Git can find at that point:
+```
+$ git config --list
+user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+...
+```
+You may see keys more than once, because Git reads the same key from different files (`/etc/gitconfig` and `~/.gitconfig`, for example). In this case, Git uses the last value for each unique key it sees.
+
+You can also check what Git thinks a specific key’s value is by typing `git config <key>`:
+```
+$ git config user.name
+John Doe
+```
+
+## Getting Help
+If you ever need help while using Git, there are three ways to get the manual page (manpage) help for any of the Git commands:
+```
+$ git help <verb>
+$ git <verb> --help
+$ man git-<verb>
+```
+For example, you can get the manpage help for the config command by running
+
+```
+$ git help config
+```
+These commands are nice because you can access them anywhere, even offline. If the manpages and this book aren’t enough and you need in-person help, you can try the `#git` or `#github` channel on the Freenode IRC server (`irc.freenode.net`). These channels are regularly filled with hundreds of people who are all very knowledgeable about Git and are often willing to help.
