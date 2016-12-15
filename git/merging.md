@@ -69,6 +69,10 @@ Deleted branch hotfix (3a0874c).
 ```
 
 
+__Above is the example of basic merging.__
+__Merge below will involve conflict.__
+
+
 Now you can switch back to your work-in-progress branch on issue #53 and continue working on it.
 
 
