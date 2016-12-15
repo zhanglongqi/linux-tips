@@ -34,4 +34,4 @@ To switch to an existing branch, you run the git checkout command. Let’s switc
 ```
 $ git checkout develop
 ```
-This moves HEAD to point to the develop branch.
+This moves HEAD to point to the `develop` branch.
