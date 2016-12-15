@@ -4,8 +4,9 @@
 Please refer to the [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 ## Configure 
+Please complete all the steps below by `git bash` in windows or `CLI` in Linux
 
-Your Identity
+## Your Identity
 The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:
 
 ```bash
@@ -15,13 +16,6 @@ $ git config --global user.email johndoe@example.com
 
 Again, you need to do this only once if you pass the --global option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the --global option when you’re in that project.
 
-## Initiate a git project:
-
-```
-mkdir PROJECT_NAME
-cd PROJECT_NAME
-git init
-```
 
 ## Your Editor
 Now that your identity is set up, you can configure the default text editor that will be used when Git needs you to type in a message. If not configured, Git uses your system’s default editor.
