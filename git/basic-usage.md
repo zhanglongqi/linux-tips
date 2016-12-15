@@ -166,3 +166,25 @@ $ git commit -a -m 'added new benchmarks'
 ```
 
 Notice how you don’t have to run git add on the CONTRIBUTING.md file in this case before you commit. That’s because the -a flag includes all changed files. This is convenient, but be careful; sometimes this flag will cause you to include unwanted changes.
+
+
+## Viewing the Commit History
+After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the `git log` command.
+
+```
+# longqi @ LQMacPro in ~/test_project on git:master o [15:59:44]
+$ git log
+
+commit d08b52b0fa2d837a47b4151c155a14342ba6e8d6
+Author: longqi <*****@gmail.com>
+Date:   Thu Dec 15 15:56:03 2016 +0800
+
+    update default voltage setting value from 200 to 380
+
+commit 3d7a77517bb06e44d505999240f9b8b614abec8d
+Author: longqi <****@gmail.com>
+Date:   Tue Dec 13 17:34:33 2016 +0800
+
+    new line from longqi
+
+```
