@@ -26,6 +26,7 @@
     * [Getting a Git Repository](git/getting-a-git-repository.md)
     * [Basic usage](git/basic-usage.md)
     * [Branching](git/branching.md)
+    * [Working with Remotes](git/working-with-remotes.md)
     * [Merging](git/merging.md)
     * [git merge tool](git/git_merge_tool.md)
     * [workflow of git](git/workflow-of-git.md)
