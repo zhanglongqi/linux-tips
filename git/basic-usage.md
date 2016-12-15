@@ -142,3 +142,7 @@ $ git commit -m 'update default voltage setting value from 200 to 380' readme.md
 [master d08b52b] update default voltage setting value from 200 to 380
  1 file changed, 2 insertions(+), 1 deletion(-)
 ```
+
+Now you’ve created your first commit! You can see that the commit has given you some output about itself: which branch you committed to (master), what SHA-1 checksum the commit has (463dc4f), how many files were changed, and statistics about lines added and removed in the commit.
+
+Remember that the commit records the snapshot you set up in your staging area. Anything you didn’t stage is still sitting there modified; you can do another commit to add it to your history. Every time you perform a commit, you’re recording a snapshot of your project that you can revert to or compare to later.
