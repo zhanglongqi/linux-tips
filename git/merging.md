@@ -175,3 +175,6 @@ git config --global mergetool.meld.path /c/Program files (x86)/meld/bin/meld
 ```
 or on Linux:
 
+```
+git config --global merge.tool meld
+```
