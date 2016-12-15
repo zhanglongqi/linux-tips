@@ -57,7 +57,7 @@ John Doe
 ```
 
 ## Using `ssh`
-### Generating a new SSH key on windows
+
 ```
 cd 
 mkdir .ssh
@@ -71,7 +71,9 @@ Copy and paste your **complete** public key to our [git server](http://ict.eri.n
 If you don't have a account on our git server, please contact [me](http://zhanglongqi.github.io).
 
 A complete public key example:
-![ssh public example](/assets/Snip20161215_16.png)
+```
+ssh-rsa AAVDihgxliarMlFoDnqxsDlgv12/WK6U7G7fcaCKdf6QhAqhFlmGPKPBFMlzQkFXsk8Q9ryAt AAA@BBB.CC
+```
 
 ## Getting Help
 If you ever need help while using Git, there are three ways to get the manual page (manpage) help for any of the Git commands:
