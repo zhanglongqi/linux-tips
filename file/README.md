@@ -1,10 +1,7 @@
-Mount \`img\` file in Linux
+Mount `img` file in Linux
 
-1. Check 'disk' structure by \`fdisk\`: 
+1. Check 'disk' structure by \`fdisk\`:
 
 ![](/assets/check_img.png)
 
 1. Calculate the offset: `offset = STARTUNIT * SECTOR_SIZE`
-
-
-
