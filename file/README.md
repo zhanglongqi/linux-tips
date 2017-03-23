@@ -4,5 +4,7 @@ Mount \`img\` file in Linux
 
 ![](/assets/check_img.png)
 
-2. Calculate the offset: `offset = START_UNIT * `
+1. Calculate the offset: `offset = START`_`UNIT * SECTOR_SIZE`_
+
+
 
