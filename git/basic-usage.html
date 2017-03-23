@@ -1,0 +1,947 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basic usage · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="branching.html" />
+    
+    
+    <link rel="prev" href="getting-a-git-repository.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../grub/">
+            
+                <a href="../grub/">
+            
+                    
+                    grub
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../grub/timeout_setting.html">
+            
+                <a href="../grub/timeout_setting.html">
+            
+                    
+                    timeout setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../led/">
+            
+                <a href="../led/">
+            
+                    
+                    LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../button/">
+            
+                <a href="../button/">
+            
+                    
+                    button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux_kernel_compile/">
+            
+                <a href="../linux_kernel_compile/">
+            
+                    
+                    linux kernel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux_kernel_compile/compile_setting.html">
+            
+                <a href="../linux_kernel_compile/compile_setting.html">
+            
+                    
+                    compile setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux_kernel_compile/how_to_compile.html">
+            
+                <a href="../linux_kernel_compile/how_to_compile.html">
+            
+                    
+                    How to compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../linux_kernel_compile/difference_of_kernel_format.html">
+            
+                <a href="../linux_kernel_compile/difference_of_kernel_format.html">
+            
+                    
+                    Difference of kernel format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../tools/">
+            
+                <a href="../tools/">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../tools/backup.html">
+            
+                <a href="../tools/backup.html">
+            
+                    
+                    backup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../tools/scripts.html">
+            
+                <a href="../tools/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../tools/benchmark.html">
+            
+                <a href="../tools/benchmark.html">
+            
+                    
+                    benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../tools/tftp.html">
+            
+                <a href="../tools/tftp.html">
+            
+                    
+                    network-boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../cloud/">
+            
+                <a href="../cloud/">
+            
+                    
+                    Cloud
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../cloud/amzon_ec2.html">
+            
+                <a href="../cloud/amzon_ec2.html">
+            
+                    
+                    Amzon EC2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../cloud/basic.html">
+            
+                <a href="../cloud/basic.html">
+            
+                    
+                    basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../u-boot/">
+            
+                <a href="../u-boot/">
+            
+                    
+                    U-Boot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../u-boot/introduction.html">
+            
+                <a href="../u-boot/introduction.html">
+            
+                    
+                    introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../u-boot/uenv.html">
+            
+                <a href="../u-boot/uenv.html">
+            
+                    
+                    uEnv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../u-boot/references.html">
+            
+                <a href="../u-boot/references.html">
+            
+                    
+                    references
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="getting-a-git-repository.html">
+            
+                <a href="getting-a-git-repository.html">
+            
+                    
+                    Getting a Git Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3" data-path="basic-usage.html">
+            
+                <a href="basic-usage.html">
+            
+                    
+                    Basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="branching.html">
+            
+                <a href="branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="working-with-remotes.html">
+            
+                <a href="working-with-remotes.html">
+            
+                    
+                    Working with Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="merging.html">
+            
+                <a href="merging.html">
+            
+                    
+                    Merging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="git_merge_tool.html">
+            
+                <a href="git_merge_tool.html">
+            
+                    
+                    git merge tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="workflow-of-git.html">
+            
+                <a href="workflow-of-git.html">
+            
+                    
+                    workflow of git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../network/multiple_gateway.html">
+            
+                <a href="../network/multiple_gateway.html">
+            
+                    
+                    multiple gateways
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../os/">
+            
+                <a href="../os/">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../os/arch.html">
+            
+                <a href="../os/arch.html">
+            
+                    
+                    ARCH
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../file/">
+            
+                <a href="../file/">
+            
+                    
+                    File
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../file/mount_img.html">
+            
+                <a href="../file/mount_img.html">
+            
+                    
+                    Moung IMG File
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Basic usage</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="show-current-status">Show Current Status</h2>
+<pre><code>$ git status
+On branch master
+Your branch is up-to-date with &apos;origin/master&apos;.
+nothing to commit, working tree clean
+</code></pre><h2 id="tracking-new-file">Tracking New File</h2>
+<pre><code>git add YOUR_FILE_OR_FOLDER
+</code></pre><p>If you run your status command again, you can see that your new file is now tracked and staged to be committed:</p>
+<pre><code>$ git status
+On branch master
+Your branch is up-to-date with &apos;origin/master&apos;.
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+    new file:   README.md
+</code></pre><h2 id="staging-modified-files">Staging Modified Files</h2>
+<p>Let&#x2019;s change a file that was already tracked. If you change a previously tracked file called readme.md and then run your git status command again, you get something that looks like this:</p>
+<pre><code class="lang-bash">$ git status
+On branch master
+Your branch is up-to-date with <span class="hljs-string">&apos;origin/master&apos;</span>.
+Changes not staged <span class="hljs-keyword">for</span> commit:
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)
+  (use <span class="hljs-string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   readme.md
+
+no changes added to commit (use <span class="hljs-string">&quot;git add&quot;</span> and/or <span class="hljs-string">&quot;git commit -a&quot;</span>)
+</code></pre>
+<p>To know more details you can use diff tools to see what have changed of these tracked files:</p>
+<pre><code class="lang-bash">$ git diff
+diff --git a/readme.md b/readme.md
+index 9fd6ba9..dc23ecd 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1,4 +1,6 @@
+ <span class="hljs-comment"># this is a</span>
+ <span class="hljs-comment">## second line</span>
+-<span class="hljs-comment">### thrid line</span>
+ 1. new line
++**some modifications **
++another line
++
+(END)
+</code></pre>
+<p>From the output of diff tool we can see I deleted one line and add three lines.</p>
+<p>To discard the modification you just did to last commmit:</p>
+<pre><code># longqi @ LQMacPro in ~/test_project on git:master o [14:34:04]
+$ git status
+On branch master
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+        modified:   readme.md
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+# longqi @ LQMacPro in ~/test_project on git:master x [15:40:29]
+$ git checkout readme.md
+
+# longqi @ LQMacPro in ~/test_project on git:master o [15:41:25]
+$ git status
+On branch master
+Your branch is up-to-date with &apos;origin/master&apos;.
+nothing to commit, working tree clean
+</code></pre><h2 id="ignore-files">Ignore Files</h2>
+<p>Often, you&#x2019;ll have a class of files that you don&#x2019;t want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or files produced by your build system. In such cases, you can create a file listing patterns to match them named .gitignore. Here is an example .gitignore file:</p>
+<pre><code># no .a files
+*.a
+
+# but do track lib.a, even though you&apos;re ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
+doc/**/*.pdf
+</code></pre><p>GitHub maintains a fairly comprehensive list of good .gitignore file examples for dozens of projects and languages at <a href="https://github.com/github/gitignore" target="_blank">here</a> if you want a starting point for your project.</p>
+<h3 id="git-diff-in-an-external-tool">Git Diff in an External Tool</h3>
+<p>We will continue to use the git diff command in various ways throughout the rest of the book. There is another way to look at these diffs if you prefer a graphical or external diff viewing program instead. If you run git difftool instead of git diff, you can view any of these diffs in software like emerge, vimdiff and many more (including commercial products). Run git difftool --tool-help to see what is available on your system.</p>
+<p><a href="http://meldmerge.org/" target="_blank">Meld</a> as shown in the figure is my favourite diff and merge tool. I highly recommend meld as your diff and merge tool.
+<img src="../assets/Snip20161215_18.png" alt=""></p>
+<h2 id="committing-your-changes">Committing Your Changes</h2>
+<p>Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged &#x2013; any files you have created or modified that you haven&#x2019;t run git add on since you edited them &#x2013; won&#x2019;t go into this commit. They will stay as modified files on your disk. In this case, let&#x2019;s say that the last time you ran git status, you saw that everything was staged, so you&#x2019;re ready to commit your changes. The simplest way to commit is to type git commit:</p>
+<pre><code>$ git commit
+</code></pre><p>Doing so launches your editor of choice. (This is set by your shell&#x2019;s $EDITOR environment variable &#x2013; usually vim or emacs, although you can configure it with whatever you want using the <code>git config --global core.editor</code> command as you saw in Getting Started).</p>
+<p>The editor displays the following text (this example is a Vim screen):</p>
+<pre><code>$ git commit readme.md
+
+update default voltage setting value from 200 to 380
+# Please enter the commit message for your changes. Lines starting
+# with &apos;#&apos; will be ignored, and an empty message aborts the commit.
+# Explicit paths specified without -i or -o; assuming --only paths...
+# On branch master
+# Your branch is up-to-date with &apos;origin/master&apos;.
+#
+# Changes to be committed:
+#       modified:   readme.md
+#
+</code></pre><p>You can see that the default commit message contains the latest output of the git status command commented out and one empty line on top. You can remove these comments and type your commit message, or you can leave them there to help you remember what you&#x2019;re committing. (For an even more explicit reminder of what you&#x2019;ve modified, you can pass the -v option to git commit. Doing so also puts the diff of your change in the editor so you can see exactly what changes you&#x2019;re committing.) When you exit the editor, Git creates your commit with that commit message (with the comments and diff stripped out).</p>
+<p>Alternatively, you can type your commit message inline with the commit command by specifying it after a -m flag, like this:</p>
+<pre><code>$ git commit -m &apos;update default voltage setting value from 200 to 380&apos; readme.md
+
+[master d08b52b] update default voltage setting value from 200 to 380
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+</code></pre><p>Now you&#x2019;ve created your first commit! You can see that the commit has given you some output about itself: which branch you committed to (master), what SHA-1 checksum the commit has (463dc4f), how many files were changed, and statistics about lines added and removed in the commit.</p>
+<p>Remember that the commit records the snapshot you set up in your staging area. Anything you didn&#x2019;t stage is still sitting there modified; you can do another commit to add it to your history. Every time you perform a commit, you&#x2019;re recording a snapshot of your project that you can revert to or compare to later.</p>
+<h2 id="skipping-the-staging-area">Skipping the Staging Area</h2>
+<p>Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Adding the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part:</p>
+<pre><code>$ git status
+On branch master
+Your branch is up-to-date with &apos;origin/master&apos;.
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    modified:   readme.md
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+$ git commit -a -m &apos;added new benchmarks&apos;
+[master 83e38c7] added new benchmarks
+ 1 file changed, 5 insertions(+), 0 deletions(-)
+</code></pre><p>Notice how you don&#x2019;t have to run git add on the readme.md file in this case before you commit. That&#x2019;s because the <code>-a</code> flag includes all changed files. This is convenient, but be careful; sometimes this flag will cause you to include unwanted changes.</p>
+<h2 id="tagging">Tagging</h2>
+<p>Like most VCSs, Git has the ability to tag specific points in history as being important. Typically people use this functionality to mark release points (v1.0, and so on). In this section, you&#x2019;ll learn how to list the available tags, how to create new tags, and what the different types of tags are.
+Listing the available tags in Git is straightforward. Just type <code>git tag</code>:</p>
+<pre><code># longqi @ LQMacPro in ~/PycharmProjects/Hybrid-Microgrid on git:RES_integration x [22:16:59]
+$ git tag
+auto_turn_on
+delete_ModbusTCP
+modbusTCP_end
+v1.0
+v1.1
+v2.0
+v2.0.1
+v2.0.2
+v2.1
+v2.2
+v2.3
+v3.0
+v4.0
+</code></pre><p>Git uses two main types of tags: <strong>lightweight</strong> and <strong>annotated</strong>.</p>
+<p>A lightweight tag is very much like a branch that doesn&#x2019;t change &#x2013; it&#x2019;s just a pointer to a specific commit.</p>
+<p>Annotated tags, however, are stored as full objects in the Git database. They&#x2019;re checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). It&#x2019;s generally recommended that you create annotated tags so you can have all this information; but if you want a temporary tag or for some reason don&#x2019;t want to keep the other information, lightweight tags are available too.</p>
+<h3 id="annotated-tags">Annotated Tags</h3>
+<p>Creating an annotated tag in Git is simple. The easiest way is to specify -a when you run the tag command:</p>
+<pre><code>$ git tag -a v1.4 -m &quot;my version 1.4&quot;
+$ git tag
+v0.1
+v1.3
+v1.4
+</code></pre><p>The <code>-m</code> specifies a tagging message, which is stored with the tag. If you don&#x2019;t specify a message for an annotated tag, Git launches your editor so you can type it in.</p>
+<p>You can see the tag data along with the commit that was tagged by using the <code>git show</code> command:</p>
+<pre><code>$ git show v1.4
+tag v1.4
+Tagger: Ben Straub &lt;ben@straub.cc&gt;
+Date:   Sat May 3 20:19:12 2014 -0700
+
+my version 1.4
+
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+</code></pre><p>That shows the tagger information, the date the commit was tagged, and the annotation message before showing the commit information.</p>
+<h3 id="lightweight-tags">Lightweight Tags</h3>
+<p>Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file &#x2013; no other information is kept. To create a lightweight tag, don&#x2019;t supply the <code>-a</code>, <code>-s</code>, or <code>-m</code> option:</p>
+<pre><code>$ git tag v1.4-lw
+$ git tag
+v0.1
+v1.3
+v1.4
+v1.4-lw
+v1.5
+This time, if you run git show on the tag, you don&#x2019;t see the extra tag information. The command just shows the commit:
+
+$ git show v1.4-lw
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+</code></pre><h2 id="viewing-the-commit-history">Viewing the Commit History</h2>
+<p>After you have created several commits, or if you have cloned a repository with an existing commit history, you&#x2019;ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the <code>git log</code> command.</p>
+<pre><code># longqi @ LQMacPro in ~/test_project on git:master o [15:59:44]
+$ git log
+
+commit d08b52b0fa2d837a47b4151c155a14342ba6e8d6
+Author: longqi &lt;*****@gmail.com&gt;
+Date:   Thu Dec 15 15:56:03 2016 +0800
+
+    update default voltage setting value from 200 to 380
+
+commit 3d7a77517bb06e44d505999240f9b8b614abec8d
+Author: longqi &lt;****@gmail.com&gt;
+Date:   Tue Dec 13 17:34:33 2016 +0800
+
+    new line from longqi
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="getting-a-git-repository.html" class="navigation navigation-prev " aria-label="Previous page: Getting a Git Repository">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="branching.html" class="navigation navigation-next " aria-label="Next page: Branching">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basic usage","level":"1.9.3","depth":2,"next":{"title":"Branching","level":"1.9.4","depth":2,"path":"git/branching.md","ref":"git/branching.md","articles":[]},"previous":{"title":"Getting a Git Repository","level":"1.9.2","depth":2,"path":"git/getting-a-git-repository.md","ref":"git/getting-a-git-repository.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/basic-usage.md","mtime":"2017-03-23T11:27:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-23T11:37:54.613Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,761 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Getting a Git Repository · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="basic-usage.html" />
+    
+    
+    <link rel="prev" href="getting-started.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../grub/">
+            
+                <a href="../grub/">
+            
+                    
+                    grub
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../grub/timeout_setting.html">
+            
+                <a href="../grub/timeout_setting.html">
+            
+                    
+                    timeout setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../led/">
+            
+                <a href="../led/">
+            
+                    
+                    LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../button/">
+            
+                <a href="../button/">
+            
+                    
+                    button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux_kernel_compile/">
+            
+                <a href="../linux_kernel_compile/">
+            
+                    
+                    linux kernel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux_kernel_compile/compile_setting.html">
+            
+                <a href="../linux_kernel_compile/compile_setting.html">
+            
+                    
+                    compile setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux_kernel_compile/how_to_compile.html">
+            
+                <a href="../linux_kernel_compile/how_to_compile.html">
+            
+                    
+                    How to compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../linux_kernel_compile/difference_of_kernel_format.html">
+            
+                <a href="../linux_kernel_compile/difference_of_kernel_format.html">
+            
+                    
+                    Difference of kernel format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../tools/">
+            
+                <a href="../tools/">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../tools/backup.html">
+            
+                <a href="../tools/backup.html">
+            
+                    
+                    backup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../tools/scripts.html">
+            
+                <a href="../tools/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../tools/benchmark.html">
+            
+                <a href="../tools/benchmark.html">
+            
+                    
+                    benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../tools/tftp.html">
+            
+                <a href="../tools/tftp.html">
+            
+                    
+                    network-boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../cloud/">
+            
+                <a href="../cloud/">
+            
+                    
+                    Cloud
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../cloud/amzon_ec2.html">
+            
+                <a href="../cloud/amzon_ec2.html">
+            
+                    
+                    Amzon EC2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../cloud/basic.html">
+            
+                <a href="../cloud/basic.html">
+            
+                    
+                    basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../u-boot/">
+            
+                <a href="../u-boot/">
+            
+                    
+                    U-Boot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../u-boot/introduction.html">
+            
+                <a href="../u-boot/introduction.html">
+            
+                    
+                    introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../u-boot/uenv.html">
+            
+                <a href="../u-boot/uenv.html">
+            
+                    
+                    uEnv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../u-boot/references.html">
+            
+                <a href="../u-boot/references.html">
+            
+                    
+                    references
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.2" data-path="getting-a-git-repository.html">
+            
+                <a href="getting-a-git-repository.html">
+            
+                    
+                    Getting a Git Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="basic-usage.html">
+            
+                <a href="basic-usage.html">
+            
+                    
+                    Basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="branching.html">
+            
+                <a href="branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="working-with-remotes.html">
+            
+                <a href="working-with-remotes.html">
+            
+                    
+                    Working with Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="merging.html">
+            
+                <a href="merging.html">
+            
+                    
+                    Merging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="git_merge_tool.html">
+            
+                <a href="git_merge_tool.html">
+            
+                    
+                    git merge tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="workflow-of-git.html">
+            
+                <a href="workflow-of-git.html">
+            
+                    
+                    workflow of git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../network/multiple_gateway.html">
+            
+                <a href="../network/multiple_gateway.html">
+            
+                    
+                    multiple gateways
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../os/">
+            
+                <a href="../os/">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../os/arch.html">
+            
+                <a href="../os/arch.html">
+            
+                    
+                    ARCH
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../file/">
+            
+                <a href="../file/">
+            
+                    
+                    File
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../file/mount_img.html">
+            
+                <a href="../file/mount_img.html">
+            
+                    
+                    Moung IMG File
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Getting a Git Repository</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="initializing-a-repository-in-an-existing-directory">Initializing a Repository in an Existing Directory</h2>
+<p>If you&#x2019;re starting to track an existing project in Git, you need to go to the project&#x2019;s directory and type:</p>
+<pre><code>$ git init
+</code></pre><p>This creates a new subdirectory named .git that contains all of your necessary repository files &#x2013; a Git repository skeleton. At this point, nothing in your project is tracked yet. (See Git Internals for more information about exactly what files are contained in the <code>.git</code> directory you just created.)</p>
+<p>If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few git add commands that specify the files you want to track, followed by a git commit:</p>
+<pre><code>$ git add *.c
+$ git add LICENSE
+$ git commit -m &apos;initial project version&apos;
+</code></pre><p>We&#x2019;ll go over what these commands do in just a minute. At this point, you have a Git repository with tracked files and an initial commit.</p>
+<h2 id="cloning-an-existing-repository">Cloning an Existing Repository</h2>
+<p>If you want to get a copy of an existing Git repository &#x2013; for example, a project you&#x2019;d like to contribute to &#x2013; the command you need is git clone. If you&#x2019;re familiar with other VCS systems such as Subversion, you&#x2019;ll notice that the command is <strong>clone</strong> and not <strong>checkout</strong>. This is an important distinction &#x2013; instead of getting just a working copy, Git receives a full copy of nearly all data that the server has. Every version of every file for the history of the project is pulled down by default when you run git clone. In fact, if your server disk gets corrupted, you can often use nearly any of the clones on any client to set the server back to the state it was in when it was cloned (you may lose some server-side hooks and such, but all the versioned data would be there).</p>
+<p>You clone a repository with git clone [url]. For example, if you want to clone the Git linkable library called libgit2, you can do so like this:</p>
+<pre><code>$ git clone git@ict.eri.ntu.edu.sg:test_group/test_project.git
+</code></pre><p>That creates a directory named &#x201C;test_project&#x201D;, initializes a <code>.git</code> directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version. If you go into the new test_project directory, you&#x2019;ll see the project files in there, ready to be worked on or used. If you want to clone the repository into a directory named something other than &#x201C;test_project&#x201D;, you can specify that as the next command-line option:</p>
+<pre><code>$ git clone git@ict.eri.ntu.edu.sg:test_group/test_project.git my_project
+</code></pre><p>That command does the same thing as the previous one, but the target directory is called <code>my_project</code>.</p>
+<p>Git has a number of different transfer protocols you can use. The previous example uses the <code>git://</code> protocol, but you may also see <code>https://</code> or <code>user@server:path/to/repo.git</code>, which uses the SSH transfer protocol. Getting Git on a Server will introduce all of the available options the server can set up to access your Git repository and the pros and cons of each.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page: Getting started">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="basic-usage.html" class="navigation navigation-next " aria-label="Next page: Basic usage">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Getting a Git Repository","level":"1.9.2","depth":2,"next":{"title":"Basic usage","level":"1.9.3","depth":2,"path":"git/basic-usage.md","ref":"git/basic-usage.md","articles":[]},"previous":{"title":"Getting started","level":"1.9.1","depth":2,"path":"git/getting-started.md","ref":"git/getting-started.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/getting-a-git-repository.md","mtime":"2017-03-23T11:27:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-23T11:37:54.613Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

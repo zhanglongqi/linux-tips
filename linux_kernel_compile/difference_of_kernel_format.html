@@ -1,0 +1,780 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Difference of kernel format · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../tools/" />
+    
+    
+    <link rel="prev" href="how_to_compile.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../grub/">
+            
+                <a href="../grub/">
+            
+                    
+                    grub
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../grub/timeout_setting.html">
+            
+                <a href="../grub/timeout_setting.html">
+            
+                    
+                    timeout setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../led/">
+            
+                <a href="../led/">
+            
+                    
+                    LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../button/">
+            
+                <a href="../button/">
+            
+                    
+                    button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    linux kernel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="compile_setting.html">
+            
+                <a href="compile_setting.html">
+            
+                    
+                    compile setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="how_to_compile.html">
+            
+                <a href="how_to_compile.html">
+            
+                    
+                    How to compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="difference_of_kernel_format.html">
+            
+                <a href="difference_of_kernel_format.html">
+            
+                    
+                    Difference of kernel format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../tools/">
+            
+                <a href="../tools/">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../tools/backup.html">
+            
+                <a href="../tools/backup.html">
+            
+                    
+                    backup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../tools/scripts.html">
+            
+                <a href="../tools/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../tools/benchmark.html">
+            
+                <a href="../tools/benchmark.html">
+            
+                    
+                    benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../tools/tftp.html">
+            
+                <a href="../tools/tftp.html">
+            
+                    
+                    network-boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../cloud/">
+            
+                <a href="../cloud/">
+            
+                    
+                    Cloud
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../cloud/amzon_ec2.html">
+            
+                <a href="../cloud/amzon_ec2.html">
+            
+                    
+                    Amzon EC2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../cloud/basic.html">
+            
+                <a href="../cloud/basic.html">
+            
+                    
+                    basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../u-boot/">
+            
+                <a href="../u-boot/">
+            
+                    
+                    U-Boot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../u-boot/introduction.html">
+            
+                <a href="../u-boot/introduction.html">
+            
+                    
+                    introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../u-boot/uenv.html">
+            
+                <a href="../u-boot/uenv.html">
+            
+                    
+                    uEnv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../u-boot/references.html">
+            
+                <a href="../u-boot/references.html">
+            
+                    
+                    references
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../git/getting-started.html">
+            
+                <a href="../git/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../git/getting-a-git-repository.html">
+            
+                <a href="../git/getting-a-git-repository.html">
+            
+                    
+                    Getting a Git Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../git/basic-usage.html">
+            
+                <a href="../git/basic-usage.html">
+            
+                    
+                    Basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../git/branching.html">
+            
+                <a href="../git/branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../git/working-with-remotes.html">
+            
+                <a href="../git/working-with-remotes.html">
+            
+                    
+                    Working with Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../git/merging.html">
+            
+                <a href="../git/merging.html">
+            
+                    
+                    Merging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../git/git_merge_tool.html">
+            
+                <a href="../git/git_merge_tool.html">
+            
+                    
+                    git merge tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../git/workflow-of-git.html">
+            
+                <a href="../git/workflow-of-git.html">
+            
+                    
+                    workflow of git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../network/multiple_gateway.html">
+            
+                <a href="../network/multiple_gateway.html">
+            
+                    
+                    multiple gateways
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../os/">
+            
+                <a href="../os/">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../os/arch.html">
+            
+                <a href="../os/arch.html">
+            
+                    
+                    ARCH
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../file/">
+            
+                <a href="../file/">
+            
+                    
+                    File
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../file/mount_img.html">
+            
+                <a href="../file/mount_img.html">
+            
+                    
+                    Moung IMG File
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Difference of kernel format</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="uimage&#x3001;zimage&#x3001;bzimage&#x3001;vlinzx&#x533A;&#x522B;">uImage&#x3001;zImage&#x3001;bzImage&#x3001;vlinzx&#x533A;&#x522B;</h1>
+<p>&#x5728;&#x7F51;&#x7EDC;&#x4E2D;&#xFF0C;&#x4E0D;&#x5C11;&#x670D;&#x52A1;&#x5668;&#x91C7;&#x7528;&#x7684;&#x662F;Linux&#x7CFB;&#x7EDF;&#x3002;&#x4E3A;&#x4E86;&#x8FDB;&#x4E00;&#x6B65;&#x63D0;&#x9AD8;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6839; &#x636E;&#x7279;&#x5B9A;&#x7684;&#x786C;&#x4EF6;&#x53CA;&#x9700;&#x6C42;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;Linux&#x5185;&#x6838;&#x3002;&#x7F16;&#x8BD1;Linux &#x5185;&#x6838;&#xFF0C;&#x9700;&#x8981;&#x6839;&#x636E;&#x89C4;&#x5B9A;&#x7684;&#x6B65;&#x9AA4;&#x8FDB;&#x884C;&#xFF0C;&#x7F16;&#x8BD1;&#x5185;&#x6838;&#x8FC7;&#x7A0B;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E;RedHat Linux&#xFF0C;&#x5728;/boot&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x4E9B;&#x4E0E;Linux&#x5185;&#x6838;&#x6709;&#x5173;&#x7684;&#x6587;&#x4EF6; .
+&#x3000;&#x3000;&#x7F16;&#x8BD1;&#x8FC7;RedHat Linux&#x5185;&#x6838;&#x7684;&#x4EBA;&#x5BF9;&#x5176;&#x4E2D;&#x7684;System.map&#x3001;vmlinuz&#x3001;initrd-2.4.7-10.img&#x5370;&#x8C61;&#x53EF;&#x80FD;&#x6BD4;&#x8F83;&#x6DF1;&#x523B;&#xFF0C;&#x56E0;&#x4E3A;&#x7F16;&#x8BD1;&#x5185;&#x6838;&#x8FC7;&#x7A0B;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x7684;&#x5EFA;&#x7ACB;&#x7B49;&#x64CD;&#x4F5C;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x600E;&#x4E48;&#x4EA7;&#x751F;&#x7684;?&#x53C8;&#x6709;&#x4EC0;&#x4E48;&#x4F5C;&#x7528;&#x5462;?</p>
+<p>&#x5BF9;&#x4E8E;Linux&#x5185;&#x6838;&#xFF0C;&#x7F16;&#x8BD1;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x683C;&#x5F0F;&#x7684;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;
+<code>make zImage</code>
+<code>make uImage</code>
+<code>make bzImage</code></p>
+<h2 id="zimage">zImage</h2>
+<p>&#x662F;ARM Linux&#x5E38;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x538B;&#x7F29;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;512KB&#xFF0C;<code>bzImage</code> &#x5373;<code>bigzImage</code> &#xFF0C;&#x4E8C;&#x8005;&#x7684;&#x5185;&#x6838;&#x90FD;&#x662F;<code>gzip</code>&#x538B;&#x7F29;&#x7684;</p>
+<h2 id="uimage">uImage</h2>
+<p>&#x662F;U-boot&#x4E13;&#x7528;&#x7684;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x662F;&#x5728;`zImage&#x4E4B;&#x524D;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;0x40&#x7684;&#x201C;&#x5934;&#x201D;&#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#x7684;
+&#x7C7B;&#x578B;&#x3001;&#x52A0;&#x8F7D;&#x4F4D;&#x7F6E;&#x3001;&#x751F;&#x6210;&#x65F6;&#x95F4;&#x3001;&#x5927;&#x5C0F;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x4ECE;uImage&#x7684;0x40&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6267;&#x884C;&#xFF0C;zImage&#x548C;
+uImage&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x533A;&#x522B;&#x3002;&#x53E6;&#x5916;&#xFF0C;Linux2.4&#x5185;&#x6838;&#x4E0D;&#x652F;&#x6301;uImage&#xFF0C;Linux2.6&#x5185;&#x6838;&#x52A0;&#x5165;&#x4E86;&#x5F88;&#x591A;&#x5BF9;&#x5D4C;&#x5165;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;&#x652F;&#x6301;
+&#xFF0C;&#x4F46;&#x662F;uImage&#x7684;&#x751F;&#x6210;&#x4E5F;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x3002;</p>
+<h2 id="vmlinuz">vmlinuz</h2>
+<p>&#x3000;&#x3000;<code>vmlinuz</code>&#x662F;&#x53EF;&#x5F15;&#x5BFC;&#x7684;&#x3001;&#x538B;&#x7F29;&#x7684;&#x5185;&#x6838;&#x3002;&#x201C;vm&#x201D;&#x4EE3;&#x8868;&#x201C;Virtual Memory&#x201D;&#x3002;Linux
+&#x3000;&#x3000;&#x652F;&#x6301;&#x865A;&#x62DF;&#x5185;&#x5B58;&#xFF0C;&#x4E0D;&#x50CF;&#x8001;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6BD4;&#x5982;DOS&#x6709;640KB&#x5185;&#x5B58;&#x7684;&#x9650;&#x5236;&#x3002;Linux&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x786C;&#x76D8;&#x7A7A;&#x95F4;&#x4F5C;&#x4E3A;&#x865A;&#x62DF;&#x5185;&#x5B58;&#xFF0C;&#x56E0;&#x6B64;&#x5F97;&#x540D;&#x201C;vm&#x201D;&#x3002;
+&#x3000;&#x3000;<code>vmlinuz</code>&#x662F;&#x53EF;&#x6267;&#x884C; &#x7684;Linux&#x5185;&#x6838;&#xFF0C;&#x5B83;&#x4F4D;&#x4E8E;<code>/boot/vmlinuz</code>&#xFF0C;&#x5B83;&#x4E00;&#x822C;&#x662F;&#x4E00;&#x4E2A;&#x8F6F;&#x94FE;&#x63A5;&#xFF0C;&#x6BD4;&#x5982;&#x56FE;&#x4E2D;&#x662F;vmlinuz-2.4.7-10
+&#x3000;&#x3000;&#x7684;&#x8F6F;&#x94FE;&#x63A5;&#x3002;</p>
+<p>vmlinuz&#x7684;&#x5EFA;&#x7ACB;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;:</p>
+<pre><code>&#x4E00; &#x662F;&#x7F16;&#x8BD1;&#x5185;&#x6838;&#x65F6;&#x901A;&#x8FC7;`make zImage`&#x521B;&#x5EFA;&#xFF0C;&#x624B;&#x52A8;&#x62F7;&#x8D1D;&#x5230;/boot&#x76EE;&#x5F55;&#x4E0B;&#x9762;. zImage&#x9002;&#x7528;&#x4E8E;&#x5C0F;&#x5185;&#x6838;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5B83;&#x7684;&#x5B58;&#x5728;&#x662F;&#x4E3A;&#x4E86;&#x5411;&#x540E;&#x7684;&#x517C;&#x5BB9;&#x6027;.
+</code></pre><p>&#x3000;&#x3000;&#x4E8C; &#x662F;&#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65F6;&#x901A;&#x8FC7;&#x547D;&#x4EE4;<code>make bzImage</code>&#x521B;&#x5EFA;&#xFF0C;&#x7136;&#x540E;&#x624B;&#x52A8;&#x62F7;&#x8D1D;&#x81F3;/boot&#x76EE;&#x5F55;&#x4E0B;&#x3002;<code>bzImage</code>&#x662F;&#x538B;&#x7F29;&#x7684;
+&#x3000;&#x3000;&#x5185;&#x6838;&#x6620;&#x50CF;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;<code>bzImage</code>&#x4E0D;&#x662F;&#x7528;<code>bzip2</code>&#x538B;&#x7F29;&#x7684;,bz&#x8868;&#x793A;<code>big zImage</code>&#x3002; <code>bzImage</code>&#x4E2D;&#x7684;b&#x662F;&#x201C;big&#x201D;&#x610F;&#x601D;&#x3002; <code>zImage(vmlinuz)</code>&#x548C;<code>bzImage(vmlinuz)</code>&#x90FD;&#x662F;&#x7528;gzip&#x538B;&#x7F29;&#x7684;&#x3002;&#x5B83;&#x4EEC;&#x4E0D;&#x4EC5;&#x662F;&#x4E00;&#x4E2A;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E14;&#x5728;&#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x90E8;&#x5206;&#x5185;&#x5D4C;&#x6709;<code>gzip</code>&#x89E3;&#x538B;&#x7F29;&#x4EE3;&#x7801;&#x3002;&#x6240;&#x4EE5;&#x4F60;&#x4E0D;&#x80FD;&#x7528;<code>gunzip</code>&#x6216;<code>gzip &#x2013;dc</code>&#x89E3;&#x5305;<code>vmlinuz</code>&#x3002;
+&#x5185;&#x6838;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5FAE;&#x578B;&#x7684;<code>gzip</code>&#x7528;&#x4E8E;&#x89E3;&#x538B;&#x7F29;&#x5185;&#x6838;&#x5E76;&#x5F15;&#x5BFC;&#x5B83;&#x3002;&#x4E24;&#x8005;&#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#xFF0C;&#x8001;&#x7684;<code>zImage</code>&#x89E3;&#x538B;&#x7F29;&#x5185;&#x6838;&#x5230;&#x4F4E;&#x7AEF;&#x5185;&#x5B58;(&#x7B2C;&#x4E00;&#x4E2A; 640K)&#xFF0C;<code>bzImage</code>&#x89E3;&#x538B;&#x7F29;&#x5185;&#x6838;&#x5230;&#x9AD8;&#x7AEF;&#x5185;&#x5B58;(1M&#x4EE5;&#x4E0A;)&#x3002;&#x5982;&#x679C;&#x5185;&#x6838;&#x6BD4;&#x8F83;&#x5C0F;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x91C7;&#x7528;<code>zImage</code>&#x6216;<code>bzImage</code>&#x4E4B;&#x4E00;&#xFF0C;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5F15;&#x5BFC;&#x7684;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C; &#x65F6;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;&#x5927;&#x7684;&#x5185;&#x6838;&#x91C7;&#x7528;<code>bzImage</code>&#xFF0C;&#x4E0D;&#x80FD;&#x91C7;&#x7528;<code>zImage</code>&#x3002;
+<code>vmlinux</code>&#x662F;&#x672A;&#x538B;&#x7F29;&#x7684;&#x5185;&#x6838;&#xFF0C;<code>vmlinuz</code>&#x662F;<code>vmlinux</code>&#x7684;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="initrd-xxximg">initrd-x.x.x.img</h2>
+<p>&#x3000;&#x3000;<code>initrd</code>&#x662F;&#x201C;initial ramdisk&#x201D;&#x7684;&#x7B80;&#x5199;&#x3002;<code>initrd</code>&#x4E00;&#x822C;&#x88AB;&#x7528;&#x6765;&#x4E34;&#x65F6;&#x7684;&#x5F15;&#x5BFC;&#x786C;&#x4EF6;&#x5230;&#x5B9E;&#x9645;&#x5185;&#x6838;<code>vmlinuz</code>&#x80FD;&#x591F;&#x63A5;&#x7BA1;&#x5E76;&#x7EE7;&#x7EED;&#x5F15;&#x5BFC;&#x7684;&#x72B6;&#x6001;&#x3002;&#x56FE;&#x4E2D;&#x7684;initrd-2.4.7-10.img&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;ext3&#x7B49;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53CA;scsi&#x8BBE;&#x5907;&#x7684;&#x9A71;&#x52A8;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x6BD4;&#x5982;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;scsi&#x786C;&#x76D8;&#xFF0C;&#x800C;&#x5185;&#x6838;vmlinuz&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;scsi&#x786C;&#x4EF6;&#x7684;&#x9A71;&#x52A8;&#xFF0C;scsi&#x6A21;&#x5757;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x6839;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;/lib/modules&#x4E0B;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x88C5;&#x5165;scsi&#x6A21;&#x5757;&#x4E4B;&#x524D;&#xFF0C;&#x5185;&#x6838;&#x4E0D;&#x80FD;&#x52A0;&#x8F7D;&#x6839;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x5F15;&#x5BFC;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x8BFB;&#x5B9E;&#x9645;&#x5185;&#x6838;&#x7684;initrd&#x5185;&#x6838;&#x5E76;&#x7528;initrd&#x4FEE;&#x6B63; scsi&#x5F15;&#x5BFC;&#x95EE;&#x9898;&#x3002;initrd-2.4.7-10.img&#x662F;&#x7528;gzip&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#xFF0C;initrd&#x5B9E;&#x73B0;&#x52A0;&#x8F7D;&#x4E00;&#x4E9B;&#x6A21;&#x5757;&#x548C;&#x5B89;&#x88C5;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+<p><code>initrd</code>&#x6620;&#x8C61;&#x6587;&#x4EF6;&#x662F;&#x4F7F;&#x7528;<code>initrd</code>&#x521B;&#x5EFA;&#x7684;&#x3002;<code>initrd</code>&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x521B;&#x5EFA;<code>initrd</code>&#x6620;&#x8C61;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x662F;RedHat&#x4E13;&#x6709;&#x7684;(&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#xFF0C;&#x5728;Linux&#x5185;&#x6838;&#x5305;&#x91CC;/Documentation/Changes&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x63D0;&#x5230;&#x8981;&#x5C06;<code>initrd</code>&#x5347;&#x7EA7;&#xFF09;&#x3002;&#x5176;&#x5B83;Linux&#x53D1;&#x884C;&#x7248;&#x6216;&#x8BB8;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x8FD9;&#x662F;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x8BF7;&#x770B;&#x5E2E;&#x52A9;:<code>man initrd</code>&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x521B;&#x5EFA;<code>initrd</code>&#x6620;&#x8C61;&#x6587;&#x4EF6;&#x3002;
+<code>initrd</code>&#x6620;&#x8C61;&#x6587;&#x4EF6;&#x662F;&#x4F7F;&#x7528;<code>initrd</code>&#x521B;&#x5EFA;&#x7684;&#x3002;<code>initrd</code>&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x521B;&#x5EFA;<code>initrd</code>&#x6620;&#x8C61;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x662F;RedHat&#x4E13;&#x6709;&#x7684;&#x3002;&#x5176;&#x5B83;Linux&#x53D1;&#x884C;&#x7248;&#x6216;&#x8BB8;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x8FD9;&#x662F;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x8BF7;&#x770B;&#x5E2E;&#x52A9;:<code>man initrd</code>&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x521B;&#x5EFA;<code>initrd</code>&#x6620;&#x8C61;&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="uimage">uImage</h2>
+<p>vmlinux&#x662F;&#x5185;&#x6838;&#x6587;&#x4EF6;&#xFF0C;zImage&#x662F;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x9ED8;&#x8BA4;&#x7684;&#x538B;&#x7F29;&#x5185;&#x6838;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x538B;&#x7F29;vmlinux&#xFF0C;&#x52A0;&#x4E0A;&#x4E00;&#x6BB5;&#x89E3;&#x538B;&#x542F;&#x52A8;&#x4EE3;&#x7801;&#x5F97;&#x5230;&#x3002;&#x800C;uImage&#x662F;u-boot&#x4F7F;&#x7528;bootm&#x547D;&#x4EE4;&#x5F15;&#x5BFC;&#x7684;Linux&#x538B;&#x7F29;&#x5185;&#x6838;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#x683C;&#x5F0F;,&#x662F;&#x4F7F;&#x7528;&#x5DE5;&#x5177;mkimage&#x5BF9;&#x666E;&#x901A;&#x7684;&#x538B;&#x7F29;&#x5185;&#x6838;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#xFF08;zImage&#xFF09;&#x52A0;&#x5DE5;&#x800C;&#x5F97;&#x3002;&#x5B83;&#x662F;uboot&#x4E13;&#x7528;&#x7684;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x662F;&#x5728;zImage&#x4E4B;&#x524D;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; 64&#x5B57;&#x8282;&#x7684;&#x201C;&#x5934;&#x201D;&#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x5185;&#x6838;&#x7684;&#x7248;&#x672C;&#x3001;&#x52A0;&#x8F7D;&#x4F4D;&#x7F6E;&#x3001;&#x751F;&#x6210;&#x65F6;&#x95F4;&#x3001;&#x5927;&#x5C0F;&#x7B49;&#x4FE1;&#x606F;&#xFF1B;&#x5176;0x40&#x4E4B;&#x540E;&#x4E0E;zImage&#x6CA1;&#x533A;&#x522B;&#x3002;
+&#x7531;&#x4E8E;bootloader&#x4E00;&#x822C;&#x8981;&#x5360;&#x7528;0X0&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;uImage&#x76F8;&#x6BD4;zImage&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x548C;bootloader&#x5171;&#x5B58;&#x3002;
+&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x8DDF;&#x624B;&#x52A8;&#x7684;&#x533A;&#x522B;,&#x6709;&#x4E86;uImage&#x5934;&#x90E8;&#x7684;&#x63CF;&#x8FF0;,u-boot&#x5C31;&#x77E5;&#x9053;&#x5BF9;&#x5E94;Image&#x7684;&#x4FE1;&#x606F;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5934;&#x90E8;&#x5219;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x53BB;&#x641E;&#x90A3;&#x4E9B;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x751F;&#x6210;uImage&#x6587;&#x4EF6;&#xFF1F;&#x9996;&#x5148; &#x5728;uboot&#x7684;/tools&#x76EE;&#x5F55;&#x4E0B;&#x5BFB;&#x627E;mkimage&#x6587;&#x4EF6;&#xFF0C;&#x628A;&#x5176;copy&#x5230;&#x7CFB;&#x7EDF;/usr/local/bin&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5B8C;&#x6210;&#x5236;&#x4F5C;&#x5DE5;&#x5177;&#x3002;&#x7136;&#x540E;&#x5728;&#x5185;&#x6838;&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;make uImage&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x5728;arch/arm/boot/&#x76EE;&#x5F55;&#x4E0B;&#x53D1;&#x73B0;uImage&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x5927;&#x5C0F;&#x6BD4;zImage&#x591A;64&#x4E2A;&#x5B57;&#x8282;&#x3002;
+&#x6B64;&#x5916;&#xFF0C;&#x5E73;&#x65F6;&#x8C03;&#x8BD5;&#x7528;uImage&#xFF0C;&#x4E0D;&#x7528;&#x53BB;&#x7BA1;&#x8C03;&#x6574;&#x4E86;&#x54EA;&#x4E9B;&#x4E1C;&#x897F;&#xFF1B;zImage&#x5219;&#x662F;&#x4E00;&#x5207;OK&#x540E;&#x76F4;&#x63A5;&#x70E7;0X0&#x3002;&#x5F00;&#x673A;&#x5C31;&#x8FD0;&#x884C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="how_to_compile.html" class="navigation navigation-prev " aria-label="Previous page: How to compile">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../tools/" class="navigation navigation-next " aria-label="Next page: Tools">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Difference of kernel format","level":"1.5.3","depth":2,"next":{"title":"Tools","level":"1.6","depth":1,"path":"tools/README.md","ref":"tools/README.md","articles":[{"title":"backup","level":"1.6.1","depth":2,"path":"tools/backup.md","ref":"tools/backup.md","articles":[]},{"title":"Scripts","level":"1.6.2","depth":2,"path":"tools/scripts.md","ref":"tools/scripts.md","articles":[]},{"title":"benchmark","level":"1.6.3","depth":2,"path":"tools/benchmark.md","ref":"tools/benchmark.md","articles":[]},{"title":"network-boot","level":"1.6.4","depth":2,"path":"tools/tftp.md","ref":"tools/tftp.md","articles":[]}]},"previous":{"title":"How to compile","level":"1.5.2","depth":2,"path":"linux_kernel_compile/how_to_compile.md","ref":"linux_kernel_compile/how_to_compile.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"linux_kernel_compile/difference_of_kernel_format.md","mtime":"2017-03-23T11:27:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-23T11:37:54.613Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

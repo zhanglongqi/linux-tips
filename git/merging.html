@@ -1,0 +1,868 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Merging · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="git_merge_tool.html" />
+    
+    
+    <link rel="prev" href="working-with-remotes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../grub/">
+            
+                <a href="../grub/">
+            
+                    
+                    grub
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../grub/timeout_setting.html">
+            
+                <a href="../grub/timeout_setting.html">
+            
+                    
+                    timeout setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../led/">
+            
+                <a href="../led/">
+            
+                    
+                    LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../button/">
+            
+                <a href="../button/">
+            
+                    
+                    button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux_kernel_compile/">
+            
+                <a href="../linux_kernel_compile/">
+            
+                    
+                    linux kernel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux_kernel_compile/compile_setting.html">
+            
+                <a href="../linux_kernel_compile/compile_setting.html">
+            
+                    
+                    compile setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux_kernel_compile/how_to_compile.html">
+            
+                <a href="../linux_kernel_compile/how_to_compile.html">
+            
+                    
+                    How to compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../linux_kernel_compile/difference_of_kernel_format.html">
+            
+                <a href="../linux_kernel_compile/difference_of_kernel_format.html">
+            
+                    
+                    Difference of kernel format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../tools/">
+            
+                <a href="../tools/">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../tools/backup.html">
+            
+                <a href="../tools/backup.html">
+            
+                    
+                    backup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../tools/scripts.html">
+            
+                <a href="../tools/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../tools/benchmark.html">
+            
+                <a href="../tools/benchmark.html">
+            
+                    
+                    benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../tools/tftp.html">
+            
+                <a href="../tools/tftp.html">
+            
+                    
+                    network-boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../cloud/">
+            
+                <a href="../cloud/">
+            
+                    
+                    Cloud
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../cloud/amzon_ec2.html">
+            
+                <a href="../cloud/amzon_ec2.html">
+            
+                    
+                    Amzon EC2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../cloud/basic.html">
+            
+                <a href="../cloud/basic.html">
+            
+                    
+                    basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../u-boot/">
+            
+                <a href="../u-boot/">
+            
+                    
+                    U-Boot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../u-boot/introduction.html">
+            
+                <a href="../u-boot/introduction.html">
+            
+                    
+                    introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../u-boot/uenv.html">
+            
+                <a href="../u-boot/uenv.html">
+            
+                    
+                    uEnv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../u-boot/references.html">
+            
+                <a href="../u-boot/references.html">
+            
+                    
+                    references
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="getting-a-git-repository.html">
+            
+                <a href="getting-a-git-repository.html">
+            
+                    
+                    Getting a Git Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="basic-usage.html">
+            
+                <a href="basic-usage.html">
+            
+                    
+                    Basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="branching.html">
+            
+                <a href="branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="working-with-remotes.html">
+            
+                <a href="working-with-remotes.html">
+            
+                    
+                    Working with Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.6" data-path="merging.html">
+            
+                <a href="merging.html">
+            
+                    
+                    Merging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="git_merge_tool.html">
+            
+                <a href="git_merge_tool.html">
+            
+                    
+                    git merge tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="workflow-of-git.html">
+            
+                <a href="workflow-of-git.html">
+            
+                    
+                    workflow of git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../network/multiple_gateway.html">
+            
+                <a href="../network/multiple_gateway.html">
+            
+                    
+                    multiple gateways
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../os/">
+            
+                <a href="../os/">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../os/arch.html">
+            
+                <a href="../os/arch.html">
+            
+                    
+                    ARCH
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../file/">
+            
+                <a href="../file/">
+            
+                    
+                    File
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../file/mount_img.html">
+            
+                <a href="../file/mount_img.html">
+            
+                    
+                    Moung IMG File
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Merging</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="basic-merging">Basic Merging</h2>
+<p>Let&#x2019;s go through a simple example of branching and merging with a workflow that you might use in the real world. You&#x2019;ll follow these steps:</p>
+<ol>
+<li>Do work on a web site.</li>
+<li>Create a branch for a new story you&#x2019;re working on.</li>
+<li>Do some work in that branch.</li>
+</ol>
+<p>At this stage, you&#x2019;ll receive a call that another issue is critical and you need a hotfix. You&#x2019;ll do the following:</p>
+<ol>
+<li>Switch to your production branch.</li>
+<li>Create a branch to add the hotfix.</li>
+<li>After it&#x2019;s tested, merge the hotfix branch, and push to production.</li>
+</ol>
+<p>Switch back to your original story and continue working.</p>
+<p>You&#x2019;ve decided that you&#x2019;re going to work on issue #53 in whatever issue-tracking system your company uses. </p>
+<pre><code># longqi @ LQMacPro in ~/test_project on git:develop o [16:24:07]
+$ git checkout -b iss53
+Switched to a new branch &apos;iss53&apos;
+</code></pre><p><img src="../assets/basic-branching-2.png" alt=""></p>
+<p>You work on your web site and do some commits. Doing so moves the iss53 branch forward, because you have it checked out (that is, your HEAD is pointing to it):</p>
+<pre><code>$ vim index.html
+$ git commit -a -m &apos;added a new footer [issue 53]&apos;
+</code></pre><p><img src="../assets/basic-branching-3.png" alt=""></p>
+<p>Now you get the call that there is an issue with the web site, and you need to fix it immediately. With Git, you don&#x2019;t have to deploy your fix along with the iss53 changes you&#x2019;ve made, and you don&#x2019;t have to put a lot of effort into reverting those changes before you can work on applying your fix to what is in production. All you have to do is switch back to your master branch.</p>
+<p>However, before you do that, note that if your working directory or staging area has uncommitted changes that conflict with the branch you&#x2019;re checking out, Git won&#x2019;t let you switch branches. It&#x2019;s best to have a clean working state when you switch branches. For now, let&#x2019;s assume you&#x2019;ve <strong>committed all your changes</strong>, so you can switch back to your master branch:</p>
+<pre><code>$ git checkout master
+Switched to branch &apos;master&apos;
+</code></pre><p>At this point, your project working directory is exactly the way it was before you started working on issue #53, and you can concentrate on your hotfix. This is an important point to remember: when you switch branches, Git resets your working directory to look like it did the last time you committed on that branch. It adds, removes, and modifies files automatically to make sure your working copy is what the branch looked like on your last commit to it.</p>
+<p>Next, you have a hotfix to make. Let&#x2019;s create a hotfix branch on which to work until it&#x2019;s completed:</p>
+<pre><code>$ git checkout -b hotfix
+Switched to a new branch &apos;hotfix&apos;
+$ vim index.html
+$ git commit -a -m &apos;fixed the broken email address&apos;
+[hotfix 1fb7853] fixed the broken email address
+ 1 file changed, 2 insertions(+)
+</code></pre><p><img src="../assets/basic-branching-4.png" alt=""></p>
+<p>You can run your tests, make sure the hotfix is what you want, and merge it back into your master branch to deploy to production. You do this with the git merge command:</p>
+<pre><code>$ git checkout master
+$ git merge hotfix
+Updating f42c576..3a0874c
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+</code></pre><p>You&#x2019;ll notice the phrase &#x201C;fast-forward&#x201D; in that merge. Because the commit <code>C4</code> pointed to by the branch hotfix you merged in was directly ahead of the commit <code>C2</code> you&#x2019;re on, Git simply moves the pointer forward. To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit&#x2019;s history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together &#x2013; this is called a &#x201C;fast-forward.&#x201D;</p>
+<p>Your change is now in the snapshot of the commit pointed to by the master branch, and you can deploy the fix.
+<img src="../assets/basic-branching-5.png" alt=""></p>
+<p>After your super-important fix is deployed, you&#x2019;re ready to switch back to the work you were doing before you were interrupted. However, first you&#x2019;ll delete the hotfix branch, because you no longer need it &#x2013; the <code>master</code> branch points at the same place. You can delete it with the <code>-d</code> option to git branch:</p>
+<pre><code>$ git branch -d hotfix
+Deleted branch hotfix (3a0874c).
+</code></pre><p>Now you can switch back to your work-in-progress branch on issue #53 and continue working on it.</p>
+<pre><code>$ git checkout iss53
+Switched to branch &quot;iss53&quot;
+$ vim index.html
+$ git commit -a -m &apos;finished the new footer [issue 53]&apos;
+[iss53 ad82d7a] finished the new footer [issue 53]
+1 file changed, 1 insertion(+)
+</code></pre><p><img src="../assets/basic-branching-6.png" alt=""></p>
+<p>It&#x2019;s worth noting here that the work you did in your hotfix branch is not contained in the files in your <code>iss53</code> branch. If you need to pull it in, you can merge your <code>master</code> branch into your <code>iss53</code> branch by running <code>git merge master</code>, or you can wait to integrate those changes until you decide to pull the <code>iss53</code> branch back into master later.</p>
+<p>Suppose you&#x2019;ve decided that your issue #53 work is complete and ready to be merged into your <code>master</code> branch. In order to do that, you&#x2019;ll merge your <code>iss53</code> branch into <code>master</code>, much like you merged your <code>hotfix</code> branch earlier. All you have to do is check out the branch you wish to merge into and then run the <code>git merge</code> command:</p>
+<pre><code>$ git checkout master
+Switched to branch &apos;master&apos;
+$ git merge iss53
+Merge made by the &apos;recursive&apos; strategy.
+index.html |    1 +
+1 file changed, 1 insertion(+)
+</code></pre><p>This looks a bit different than the <code>hotfix</code> merge you did earlier. In this case, your development history has diverged from some older point. Because the commit on the branch you&#x2019;re on isn&#x2019;t a direct ancestor of the branch you&#x2019;re merging in, Git has to do some work. In this case, Git does a simple three-way merge, using the two snapshots pointed to by the branch tips and the common ancestor of the two.</p>
+<p><img src="../assets/basic-merging-1.png" alt="Three snapshots used in a typical merge"></p>
+<p>Instead of just moving the branch pointer forward, Git creates a new snapshot that results from this three-way merge and automatically creates a new commit that points to it. This is referred to as a merge commit, and is special in that it has more than one parent.</p>
+<p><img src="../assets/basic-merging-2.png" alt="A merge commit"></p>
+<p>It&#x2019;s worth pointing out that Git determines the best common ancestor to use for its merge base; this is different than older tools like CVS or Subversion (before version 1.5), where the developer doing the merge had to figure out the best merge base for themselves. This makes merging a heck of a lot easier in Git than in these other systems.</p>
+<p>Now that your work is merged in, you have no further need for the <code>iss53</code> branch. You can close the ticket in your ticket-tracking system, and delete the branch:</p>
+<pre><code>$ git branch -d iss53
+</code></pre><p><strong>Above is the example of basic merging.</strong>
+<strong>Merging below will involve conflict.</strong></p>
+<h2 id="basic-merge-conflicts">Basic Merge Conflicts</h2>
+<p>Occasionally, this process doesn&#x2019;t go smoothly. If you changed the same part of the same file differently in the two branches you&#x2019;re merging together, Git won&#x2019;t be able to merge them cleanly. If your fix for issue #53 modified the same part of a file as the <code>hotfix</code>, you&#x2019;ll get a merge conflict that looks something like this:</p>
+<pre><code>$ git merge iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre><p>Git hasn&#x2019;t automatically created a new merge commit. It has paused the process while you resolve the conflict. If you want to see which files are unmerged at any point after a merge conflict, you can run <code>git status</code>:</p>
+<pre><code>$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+    both modified:      index.html
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre><p>Anything that has merge conflicts and hasn&#x2019;t been resolved is listed as unmerged. Git adds standard conflict-resolution markers to the files that have conflicts, so you can open them manually and resolve those conflicts. Your file contains a section that looks something like this:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
+&lt;div id=&quot;footer&quot;&gt;contact : email.support@github.com&lt;/div&gt;
+=======
+&lt;div id=&quot;footer&quot;&gt;
+ please contact us at support@github.com
+&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html
+</code></pre><p>This means the version in <code>HEAD</code> (your <code>master</code> branch, because that was what you had checked out when you ran your merge command) is the top part of that block (everything above the <code>=======</code>), while the version in your <code>iss53</code> branch looks like everything in the bottom part. In order to resolve the conflict, you have to either choose one side or the other or merge the contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:</p>
+<pre><code>&lt;div id=&quot;footer&quot;&gt;
+please contact us at email.support@github.com
+&lt;/div&gt;
+</code></pre><p>This resolution has a little of each section, and the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> lines have been completely removed. After you&#x2019;ve resolved each of these sections in each conflicted file, run <code>git add</code> on each file to mark it as resolved. Staging the file marks it as resolved in Git.</p>
+<p>If you want to use a graphical tool to resolve these issues, you can run git mergetool, which fires up an appropriate visual merge tool and walks you through the conflicts:</p>
+<pre><code>$ git mergetool
+This message is displayed because &apos;merge.tool&apos; is not configured.
+See &apos;git mergetool --tool-help&apos; or &apos;git help config&apos; for more details.
+&apos;git mergetool&apos; will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc3 codecompare vimdiff emerge
+Merging:
+index.html
+
+Normal merge conflict for &apos;index.html&apos;:
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (opendiff):
+</code></pre><p>You can set the merge tool on windows:</p>
+<pre><code>git config --global merge.tool meld
+git config --global mergetool.meld.path /c/Program files (x86)/meld/bin/meld
+</code></pre><p>or on Linux:</p>
+<pre><code>git config --global merge.tool meld
+git config --global mergetool.meld.path /usr/bin/meld
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="working-with-remotes.html" class="navigation navigation-prev " aria-label="Previous page: Working with Remotes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="git_merge_tool.html" class="navigation navigation-next " aria-label="Next page: git merge tool">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Merging","level":"1.9.6","depth":2,"next":{"title":"git merge tool","level":"1.9.7","depth":2,"path":"git/git_merge_tool.md","ref":"git/git_merge_tool.md","articles":[]},"previous":{"title":"Working with Remotes","level":"1.9.5","depth":2,"path":"git/working-with-remotes.md","ref":"git/working-with-remotes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/merging.md","mtime":"2017-03-23T11:27:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-23T11:37:54.613Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,33 @@
+#uEnv.txt boot kernel from TFTP, NFS or SD
+
+#basic setting for booting from tftp
+ipaddr=10.42.0.12
+serverip=10.42.0.1
+gatewayip=10.42.0.1
+staticip=${ipaddr}:${serverip}:${gatewayip}:255.255.255.0:::off
+rootpath=/home/longqi/BBB/rootfs
+
+#setting for kernel loading
+kloadaddr=0x82000000
+fdtaddr=0x83000000
+
+
+#parameters for kernel
+mmc_args=setenv bootargs console=ttyO0,115200n8 quiet root=/dev/mmcblk0p2 ro rootfstype=ext4 rootwait ip=${staticip}
+nfs_args=setenv bootargs console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=${serverip}:${rootpath} ip=${staticip}
+
+
+#load kernel and device tree
+load_u_kernel=tftpboot ${kloadaddr} ${rootpath}/boot/uImage
+load_z_kernel=tftpboot ${kloadaddr} ${rootpath}/boot/zImage
+loadfdt=tftpboot ${fdtaddr} ${rootpath}/boot/dtbs/am335x-boneblack.dtb
+
+
+#booting options
+boot_uImage=bootm ${kloadaddr} - ${fdtaddr}
+boot_zimage=bootz ${kloadaddr} - ${fdtaddr}
+
+#to boot
+uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
+
+#uenvcmd=run load_z_kernel; run loadfdt; run mmc_args; run boot_zimage
