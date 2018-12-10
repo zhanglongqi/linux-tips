@@ -1,10 +1,12 @@
 # git merge tool
 
 setting merge tool for `git mergetool  
-For the default path of meld (you can use Unix path style in git bash): 
-``` 
+For the default path of meld (you can use Unix path style in git bash):
+
+```sh
 git config --global mergetool.meld.path /C/Program\ files\ \(x86\)/Meld/meld/meld.exe  
 ```
+
 for the non-default path you can use tab key, it will suggest the pathso its easy to get it right.`
 
 **note** sometimes you need use `meldc.exe or bin/meld,`
@@ -43,9 +45,6 @@ os.system('meld "%s" "%s"' % (sys.argv[2], sys.argv[5]))
 Now we can set Git to perform it's diff on our new script \(replacing the path with yours\):
 
 ```bash
-$ git config --global diff.external /home/USERNAME/bin/diff.py
-$ git diff filename
+git config --global diff.external /home/USERNAME/bin/diff.py
+git diff filename
 ```
-
-
-
