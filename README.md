@@ -1,4 +1,2 @@
-Linux-tips
-==========
+# Initial page
 
-Linux Tips
