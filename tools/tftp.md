@@ -1,5 +1,7 @@
 # Beaglebone Black Network Boot
-##TFTP introduction, installation
+
+## TFTP introduction, installation
+
 TFTP is a popular method of booting IP phones, routers, and net boot capable PCs. It provides a simple way to download files to clients. TFTP requires a server to be running somewhere on the network, though.
 
 I will use `tftp-hpa` here.
@@ -7,9 +9,9 @@ if you have not installed it,
 
 run `sudo apt-get install tftp-hpa tftpd-hpa` if you are using debian beased linux distribution
 
-##Configuration
+## Configuration
 
-###set path for TFTP
+### set path for TFTP
 
 `sudo nano /etc/default/tftpd-hpa`
 
@@ -21,20 +23,23 @@ TFTP_ADDRESS=”0.0.0.0:69″
 TFTP_OPTIONS=”–secure”
 ```
 
-###set path permission
+### set path permission
+
 We need to change the ownership, and permissions for the NFS share directory so TFTP can do its job properly.
 
 ```sh
 sudo chown nobody\: /home/USERNAME/rootfs
 sudo chmod 777 /home/USERNAME/rootfs
 ```
-##TFTP service test
+
+## TFTP service test
 
 ```sh
 sudo service tftpd-hpa restart
 cd ~
 tftp 127.0.0.1
 ```
+
 Do make sure to issue the command cd `~` to properly test TFTP.
 
 ```sh
@@ -44,12 +49,15 @@ ls
 ```
 
 make sure am335x-boneblack.dtb exist in current working directory. Then remove am335x-boneblack.dtb.
+
 ```sh
 rm am335x-boneblack.dtb
 ```
 
-##Beaglebone Black – uEnv.txt
+## Beaglebone Black – uEnv.txt
+
 show my version first.
+
 ```sh
 #uEnv.txt boot kernel from TFTP, NFS or SD
 
@@ -89,7 +97,8 @@ uenvcmd=run load_u_kernel; run loadfdt; run mmc_args; run boot_uImage
 
 ```
 
-####demo here:
+### demo here
+
 ```sh
 bootdelay=1
 ipaddr=xxx.xxx.xxx.xxx
@@ -101,7 +110,9 @@ loadtftp=tftpboot 0x80200000 /boot/uImage; tftpboot 0x815f0000 /boot/am335x-bone
 netargs=setenv bootargs console=${console} ${optargs} root=/dev/nfs nfsroot=${serverip}:${rootpath},vers=3 rw ip=${static_ip}
 uenvcmd=setenv autoload no; run loadtftp; run netargs; bootm 0x80200000 – 0x815f0000
 ```
-####detail here:
+
+### detail here
+
 ```sh
 bootdelay=1
 ipaddr=xxx.xxx.xxx.xxx
@@ -113,21 +124,16 @@ Technically `bootdelay=1` is not needed. `ipaddr=xxx.xxx.xxx.xxx`, and `serverip
 ```sh
 static_ip=xxx.xxx.xxx.xxx:xxx.xxx.xxx.xxx:xxx.xxx.xxx.xxx:255.255.255.0:arm
 ```
+
 Translates to:
 
 ```sh
 static_ip=ipaddr:serverip:gatewayip:netmask:hostname
 ```
+
 All of these parameters with the exception of hostname are necessary with `uEnv.txt` in its current configuration. This lets uboot know where to find the /root file system. Or more correctly, these parameters are passed to the kernel through `${optargs}`.
 
-
-
-
-
-
-
-
-###reference
+### reference
 
 http://wiki.beyondlogic.org/index.php/BeagleBoneBlack_Building_Kernel
 

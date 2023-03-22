@@ -1,22 +1,26 @@
 # backup
-##Data
+## Data
 
-###backup
+### backup
+
 ``` sh
 ssh root@remoteIP "dd if=/dev/mmcblk0p1" | gzip -1 - | dd of=boot.img.gz
 ```
+
 reading and transfer at remote machine to reduce the CPU pressure and make the whole processs finish in a short time.
 
 ### restore
+
 For the restore process, it's better to do it locally
+
 ``` sh
 gzip -dc path/to/boot.img.gz | sudo dd of=/dev/mmcblk0p1
 ```
 
-#MBR & partation table (Schema)
+## MBR & partation table (Schema)
 
+### Backing up the MBR
 
-Backing up the MBR
 The MBR is stored in the the first 512 bytes of the disk. It consist of 3 parts:
 The first 446 bytes contain the boot loader.
 The next 64 bytes contain the partition table (4 entries of 16 bytes each, one entry for each primary partition).
@@ -38,19 +42,22 @@ To restore only the partition table, one must use
 You can also get the MBR from a full dd disk image.
 `dd if=/path/to/disk.img of=/mnt/sda1/mbr.img bs=512 count=1`
 
+### backup the partation table of a disk
 
-###backup the partation table of a disk
 ```bash
 sfdisk -d /dev/mmcblk0  > table.bak
 ```
-###restore a partition table file to a disk
-```
+
+### restore a partition table file to a disk
+
+``` shell
 sfdisk /dev/mmcblk0 <  table.bak
 ```
+
 show schema:
 `sfdisk -l /dev/mmcblk0`
 
-```
+```shell
 partition table of /dev/mmcblk0
   │unit: sectors
 

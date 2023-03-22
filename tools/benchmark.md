@@ -1,25 +1,33 @@
 # benchmark
-##lmbench 3.0
 
-###installation
+## lmbench 3.0
+
+### installation
+
 Building lmbench3
+
 To build lmbench3 for these experiments, we downloaded the source, extracted the files using untar, and changed into the lmbench3 directory using `cd`. The lmbench3 README explains that you can run the full suite of tests with the `make results` command.
 Tip: There is a bug in the lmbench3 code (as noted in this kerneltrap.org thread for example: http://kerneltrap.org/node/14792).  We encountered this error when running the make command:
-```
+
+```shell
 gmake[1]: *** No rule to make target '../SCCS/s.ChangeSet', needed by 'bk.ver'. Stop.
 
 gmake[1]: Leaving directory '<dir>/lmbench3/src'
 
 make: *** [lmbench] Error 2
 ```
+
 We used the touch command to create the missing file to get the make to complete smoothly. From the lmbench3 directory, we entered the following:
-```
+
+```shell
 mkdir ./SCCS
 
 touch ./SCCS/s.ChangeSet
 ```
+
 after that it will looks like this:
-```
+
+```shell
 .
 ├── bin
 │   └── armv7l-linux-gnu
@@ -38,7 +46,7 @@ after that it will looks like this:
 
 Note that the default Makefile options were used for this article. Adding flags such as compiler optimization levels can cause some problems with the benchmark's accounting code, which can lead to inaccurate measurements.
 
-###test
+### test
 
 `cd src`
 
@@ -47,7 +55,7 @@ Note that the default Makefile options were used for this article. Adding flags 
 this will compile the whole package and run the test.
 it will takes more than one hour, so have have a cup of coffee first.
 
-###generate report
+### generate report
 
 `cd ../results/`
 
@@ -55,7 +63,7 @@ it will takes more than one hour, so have have a cup of coffee first.
 
 This is the result of my Beaglebone Black (rev C) running debian armhf:
 
-```
+```pre
 
                  L M B E N C H  3 . 0   S U M M A R Y
                  ------------------------------------
