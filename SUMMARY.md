@@ -14,6 +14,7 @@
   * [Scripts](tools/scripts.md)
   * [benchmark](tools/benchmark.md)
   * [network-boot](tools/tftp.md)
+  * [byobu](tools/byobu.md)
 * [Cloud](cloud/README.md)
   * [Amzon EC2](cloud/amzon_ec2.md)
     * [basic](cloud/basic.md)
